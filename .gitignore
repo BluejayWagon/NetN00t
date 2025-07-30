@@ -1,0 +1,23 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+frontend/nnbp-fe/node_modules
+frontend/nnbp-fe/.pnp
+frontend/nnbp-fe/.pnp.js
+
+# testing
+frontend/nnbp-fe/coverage
+
+# production
+frontend/nnbp-fe/build
+
+# misc
+frontend/nnbp-fe/.DS_Store
+frontend/nnbp-fe/.env.local
+frontend/nnbp-fe/.env.development.local
+frontend/nnbp-fe/.env.test.local
+frontend/nnbp-fe/.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
