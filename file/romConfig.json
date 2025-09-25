@@ -1,0 +1,908 @@
+[
+  {
+      "name":  "18Wheeler(DLX)",
+      "pictureName":  "18wheeler.jpg",
+      "fileName":  "18_Wheeler_DX.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "18Wheeler(STD)",
+      "pictureName":  "18wheeler.jpg",
+      "fileName":  "18_Wheeler_STD.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "AirlinePilot",
+      "pictureName":  "airlinepilots.jpg",
+      "fileName":  "AirlinePilots.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "AkatsukiBlitzkampfAufAsche",
+      "pictureName":  "akatsuki.jpg",
+      "fileName":  "Akatsuki_Bk_Ausf_Achse.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "AlienFront",
+      "pictureName":  "alienfront.jpg",
+      "fileName":  "AlienFront.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "AzumangaDaiohPuzzleBobble",
+      "pictureName":  "azumanga.jpg",
+      "fileName":  "AzumangaDaiohPuzzleBobble_v3.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "BorderDown",
+      "pictureName":  "bdrdown.png",
+      "fileName":  "BorderDown_v3.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "BurningCasino",
+      "pictureName":  "burningc.jpg",
+      "fileName":  "BurningCasino_v3.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "Capcomvs.SNK2M.Fighting2001",
+      "pictureName":  "cvsgd.png",
+      "fileName":  "Capcom_Vs_SNK_2_Millionaire_Fighting_2001.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "Capcomvs.SNKM.Fight2K",
+      "pictureName":  "cvs2gd.png",
+      "fileName":  "Capcom_vs_SNK_Millenium_Fight_2000.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "Capcomvs.SNKM.Fight2KPro",
+      "pictureName":  "cvsgd.png",
+      "fileName":  "Capcom_vs_SNK_Millenium_Fight_2000_Pro.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "ChaosField",
+      "pictureName":  "chaosfield.jpg",
+      "fileName":  "ChaosField_v3.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "CleopatraFortunePlus",
+      "pictureName":  "cleof.jpg",
+      "fileName":  "CleopatraFortunePlus_v6.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "ConfidentialMission",
+      "pictureName":  "confmiss.png",
+      "fileName":  "ConfidentialMission.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "CosmicSmash",
+      "pictureName":  "csmash.png",
+      "fileName":  "CosmicSmash.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "CrazyTaxi",
+      "pictureName":  "crazytaxi.jpg",
+      "fileName":  "CrazyTaxi.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "DeadorAlive2",
+      "pictureName":  "doa2.png",
+      "fileName":  "DeadOrAlive2.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "DeadorAlive2Millenium",
+      "pictureName":  "doa2m.png",
+      "fileName":  "DeadOrAlive2Millenium.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "DeathCrimsonOX",
+      "pictureName":  "deathcox.png",
+      "fileName":  "DeathCrimsonOX.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "DokiDokiIdolStarSeeker",
+      "pictureName":  "dokidoki.png",
+      "fileName":  "DokiDokiIdolStarSeeker.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "DolphinBlue",
+      "pictureName":  "dolphinb.png",
+      "fileName":  "dol222.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "DynamiteDekaEx",
+      "pictureName":  "dybb99.png",
+      "fileName":  "DynamiteDekaEx.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "FistoftheNorthStar",
+      "pictureName":  "fotns.png",
+      "fileName":  "FOTNS_Naomi2_Fixed.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "GiantGram2KZnProWrestle3",
+      "pictureName":  "gram2000.png",
+      "fileName":  "Giant_Gram_2000.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "GiantGramZen.ProWrestle2",
+      "pictureName":  "gram2000.png",
+      "fileName":  "Giant_Gram_EPR-21820_PATCHED.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "Gigawing2",
+      "pictureName":  "gigawing2.jpg",
+      "fileName":  "GigaWing2.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "GuiltyGearXX",
+      "pictureName":  "ggx.png",
+      "fileName":  "GuiltyGearXX.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "GuiltyGearXXAccentCore",
+      "pictureName":  "ggxx.png",
+      "fileName":  "GuiltyGearXXAccentCore_v6.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "GuiltyGearXXReload",
+      "pictureName":  "ggxxrl.png",
+      "fileName":  "GuiltyGearXXReload.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "GuiltyGearXXSlash",
+      "pictureName":  "ggxxsla.png",
+      "fileName":  "GuiltyGearXXSlash_v6.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "Gunspike",
+      "pictureName":  "gunspike.jpg",
+      "fileName":  "GunSpike.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "HeavyMetalGeomatrix",
+      "pictureName":  "hmgeo.png",
+      "fileName":  "HeavyMetalGeomatrix.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "Ikaruga",
+      "pictureName":  "ikaruga.png",
+      "fileName":  "Ikaruga_v3.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "Illvelo",
+      "pictureName":  "irubero.jpg",
+      "fileName":  "Illvelo_v6.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "JamboSafari",
+      "pictureName":  "jambo.jpg",
+      "fileName":  "Jambo_Safari.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "JingyStormTheArcade",
+      "pictureName":  "jingystm.png",
+      "fileName":  "JingyStormTheArcade.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "Karous",
+      "pictureName":  "karous.png",
+      "fileName":  "karous_v3.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "KnightsofValorSevenSpirits",
+      "pictureName":  "kov7sprt.jpg",
+      "fileName":  "kov7spirits.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "KuruKuruChameleon",
+      "pictureName":  "kurucham.png",
+      "fileName":  "KuruKuruChameleon_v3.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "LaKeyboardxyu",
+      "pictureName":  "keyboard.png",
+      "fileName":  "LaKeyboardxyu_v3.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "Lupin3TheShooting",
+      "pictureName":  "lupinsho.png",
+      "fileName":  "Lupin3-TheShooting.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "LupinTheTyping",
+      "pictureName":  "lupboardType.png",
+      "fileName":  "Lupin-TheTyping.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "Mamoru-kunwaNoro.Shimatta!",
+      "pictureName":  "moeru.png",
+      "fileName":  "mamonorov6.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "Marvelvs.Capcom2",
+      "pictureName":  "mvsc2.png",
+      "fileName":  "MarvelVsCapcom2.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "MazeoftheKing",
+      "pictureName":  "mok.png",
+      "fileName":  "TheMazeOfTheKings.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "MeltyBloodActCadenza[A]",
+      "pictureName":  "meltybld.png",
+      "fileName":  "MeltyBloodActCadenza(RevA).bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "MeltyBloodActCadenza[B]",
+      "pictureName":  "meltyb.png",
+      "fileName":  "MeltyBloodActCadenzaVerB_v3.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "MeltyBloodActCadenza[B2]",
+      "pictureName":  "meltyba.png",
+      "fileName":  "MeltyBloodActCadenzaVerB2_v3.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "MeltyBloodActressAgain",
+      "pictureName":  "meltyba.png",
+      "fileName":  "MeltyBloodActressAgain_v6.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "MeltyBloodActressAgainNP",
+      "pictureName":  "meltyba.png",
+      "fileName":  "MeltyBloodActressAgain.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "MobSuitGundamFed.VsZeon",
+      "pictureName":  "gundmgd.png",
+      "fileName":  "MobileSuitGundam-FederationVsZeon.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "MobSuitGundamFed.VsZeonDX",
+      "pictureName":  "gundmxgd.png",
+      "fileName":  "MobileSuitGundam-FederationVsZeonDX.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "MonkeyBall",
+      "pictureName":  "monkeyba.png",
+      "fileName":  "MonkeyBall.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "MusapeysChocoMarker",
+      "pictureName":  "chocomk.png",
+      "fileName":  "MusapeysChocoMarker.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "NomisoKoneKonePuzzleTakoron",
+      "pictureName":  "konekone.jpg",
+      "fileName":  "NoukonePuzzleTakoron.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "PowerStone",
+      "pictureName":  "pstone.png",
+      "fileName":  "Powerstone.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "PowerStone2",
+      "pictureName":  "pstone2.png",
+      "fileName":  "PowerStone2.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "ProjectJusticeRivalSchool2",
+      "pictureName":  "projectjustice.jpg",
+      "fileName":  "RivalSchools2-ProjectJustice.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "Psyvariar2",
+      "pictureName":  "psyvar2.png",
+      "fileName":  "Psyvariar2_v6.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "PuyoPuyoDa",
+      "pictureName":  "puyofev.png",
+      "fileName":  "Puyo_Puyo_Da_EPR-22206_PATCHED.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "PuyoPuyoFever",
+      "pictureName":  "puyofev.png",
+      "fileName":  "PuyoPuyoFever_v6.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "QuizKeitaiQMode",
+      "pictureName":  "quizqgd.png",
+      "fileName":  "QuizKeitaiQMode.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "Radirgy",
+      "pictureName":  "radirgy.png",
+      "fileName":  "Radirgy_v3.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "RadirgyNoa",
+      "pictureName":  "radirgy.png",
+      "fileName":  "RadirgyNoa_v6.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "SambadeAmigo",
+      "pictureName":  "samba.png",
+      "fileName":  "Samba_De_Amigo_EPR-22966B_Patched.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "SegaMarineFishing",
+      "pictureName":  "segamarinefishing.jpg",
+      "fileName":  "Sega_Marine_Fishing_EPR-22221.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "SegaStrikeFighter",
+      "pictureName":  "ss2005.png",
+      "fileName":  "SegaStrikeFighter.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "SegaTetris",
+      "pictureName":  "tetkiwam.png",
+      "fileName":  "SegaTetris.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "SenkonoRonde",
+      "pictureName":  "senko.png",
+      "fileName":  "senkov3.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "SenkonoRondeNewVer",
+      "pictureName":  "senko.png",
+      "fileName":  "senkonewv6.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "SenkonoRondeSP",
+      "pictureName":  "senko.png",
+      "fileName":  "SenkoNoRondeSP_v3.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "ShikigaminoShiroII",
+      "pictureName":  "shikgam2.png",
+      "fileName":  "ShikigamiNoShiroII_v6.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "ShootingLove2007-Exzeal",
+      "pictureName":  "exzeal.jpg",
+      "fileName":  "ShootingLove2007-Exzeal_v6.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "SlashOut",
+      "pictureName":  "slashout.png",
+      "fileName":  "Slashout.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "Spawn",
+      "pictureName":  "spawn.png",
+      "fileName":  "spawn.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "SpikersBattle",
+      "pictureName":  "spkrbtl.png",
+      "fileName":  "SpikersBattle.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "SportsJam",
+      "pictureName":  "sprtjam.png",
+      "fileName":  "SportsJam.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "StreetFighterZero3Upper",
+      "pictureName":  "sfz3ugd.png",
+      "fileName":  "StreetFighterZero3Upper.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "SuperShanghai2005",
+      "pictureName":  "ss2005.png",
+      "fileName":  "SuperShanghai2005_v6.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "SuperShanghai2005[A]",
+      "pictureName":  "ss2005.png",
+      "fileName":  "SuperShanghai2005VerA_v6.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "TetrisKiwamemichi",
+      "pictureName":  "tetkiwam.png",
+      "fileName":  "TetrisKiwamemichi_v6.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "ToyFighter",
+      "pictureName":  "toyfight.png",
+      "fileName":  "ToyFighter.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "TriggerHeartExelica",
+      "pictureName":  "trgheart.png",
+      "fileName":  "TriggerHeartExelica_v6.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "Trizeal",
+      "pictureName":  "trizeal.png",
+      "fileName":  "Trizeal_v3.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "TypingoftheDead",
+      "pictureName":  "totd.png",
+      "fileName":  "TheTypingOfTheDead.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "UnderDefeat",
+      "pictureName":  "undefeat.png",
+      "fileName":  "UnderDefeat_v3.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "UsaguiYamashiroMahjongHen",
+      "pictureName":  "usagui.png",
+      "fileName":  "Usagui-YamashiroMahjongHen_v3.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "VirtuaAthlete",
+      "pictureName":  "vathlete.png",
+      "fileName":  "VirtuaAthlete.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "VirtuaGolf",
+      "pictureName":  "virgolf.png",
+      "fileName":  "VirtuaGolf.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "VirtuaNBA",
+      "pictureName":  "virnba.png",
+      "fileName":  "VirtuaNBA.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "VirtuaStriker2Ver.2000",
+      "pictureName":  "vs2_2k.png",
+      "fileName":  "VirtuaStriker2-2000.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "VirtuaTennis",
+      "pictureName":  "vtennisg.png",
+      "fileName":  "VirtuaTennis.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "VirtuaTennis2",
+      "pictureName":  "vtennis2.png",
+      "fileName":  "VirtuaTennis2.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "WaveRunnerGP",
+      "pictureName":  "wrgp.jpg",
+      "fileName":  "WaveRunnerGP.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "WorldSeriesBaseball",
+      "pictureName":  "wsbbgd.png",
+      "fileName":  "WorldSeriesBaseball.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "WWFRoyalRumble",
+      "pictureName":  "wwfrr.jpg",
+      "fileName":  "WWF_Royal_Rumble.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "ZeroGunner2",
+      "pictureName":  "zerogunner2.jpg",
+      "fileName":  "ZeroGunner2.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "ZombieRevenge",
+      "pictureName":  "zombrvn.png",
+      "fileName":  "ZombieRevenge.bin",
+      "boardType":  "naomi1"
+  },
+  {
+      "name":  "SamuraiShodown6",
+      "pictureName":  "samurai-shodown-6.jpg",
+      "fileName":  "SamuraiShowdownVI.bin",
+      "boardType":  "atomswave"
+  },
+  {
+      "name":  "TheRumbleFish",
+      "pictureName":  "rumblefish.jpg",
+      "fileName":  "TheRumbleFish.bin",
+      "boardType":  "atomswave"
+  },
+  {
+      "name":  "DemolishFist",
+      "pictureName":  "dfist.jpg",
+      "fileName":  "demolishfist.bin",
+      "boardType":  "atomswave"
+  },
+  {
+      "name":  "FasterthanSpeed",
+      "pictureName":  "ftspeed.jpg",
+      "fileName":  "ftspeed.bin",
+      "boardType":  "atomswave"
+  },
+  {
+      "name":  "GuiltyGearX15",
+      "pictureName":  "ggx15.jpg",
+      "fileName":  "ggx15.bin",
+      "boardType":  "atomswave"
+  },
+  {
+      "name":  "KnightsofValour",
+      "pictureName":  "kovss.jpg",
+      "fileName":  "kov7spirits.bin",
+      "boardType":  "atomswave"
+  },
+  {
+      "name":  "MetalSlug6",
+      "pictureName":  "ms6_a.jpg",
+      "fileName":  "mslug6.bin",
+      "boardType":  "atomswave"
+  },
+  {
+      "name":  "TheKingofFightersNeowave",
+      "pictureName":  "kofneowave.jpg",
+      "fileName":  "KingOfFightersNeowave.bin",
+      "boardType":  "atomswave"
+  },
+  {
+      "name":  "GuiltyGearAsuka",
+      "pictureName":  "guiltygearisuka.jpg",
+      "fileName":  "GuiltyGearIsuka.bin",
+      "boardType":  "naomi2"
+  },
+  {
+      "name":  "HokutonoKenFOTNS",
+      "pictureName":  "fistofthenorthstar.jpg",
+      "fileName":  "FOTNS_Naomi2_Fixed.bin",
+      "boardType":  "naomi2"
+  },
+  {
+      "name":  "BeachSpikers",
+      "pictureName":  "BeachSpikers.png",
+      "fileName":  "",
+      "boardType":  "naomi2"
+  },
+  {
+      "name":  "ClubKartEuropeanSession",
+      "pictureName":  "clubkarteurope.gif",
+      "fileName":  "ClubKartEuropeanSessionUnlocked.bin",
+      "boardType":  "naomi2"
+  },
+  {
+      "name":  "InitialD3Export",
+      "pictureName":  "idasv3logo.gif",
+      "fileName":  "Initial_D3_Export.bin",
+      "boardType":  "naomi2"
+  },
+  {
+      "name":  "InitialD2Export",
+      "pictureName":  "Initial2.png",
+      "fileName":  "InitialD2exp.bin",
+      "boardType":  "naomi2"
+  },
+  {
+      "name":  "InitialDExport",
+      "pictureName":  "Initial2.png",
+      "fileName":  "InitialDexp.bin",
+      "boardType":  "naomi2"
+  },
+  {
+      "name":  "InitialD2Japanese",
+      "pictureName":  "initald-japamn.jpg",
+      "fileName":  "InitialD2jap.bin",
+      "boardType":  "naomi2"
+  },
+  {
+      "name":  "InitialDJapanese",
+      "pictureName":  "InitialDJapan.jpg",
+      "fileName":  "InitialDjap.bin",
+      "boardType":  "naomi2"
+  },
+  {
+      "name":  "KingOfRoute66",
+      "pictureName":  "kor66.jpg",
+      "fileName":  "KingOfRoute66.bin",
+      "boardType":  "naomi2"
+  },
+  {
+      "name":  "VirtuaFighter4EvoverB",
+      "pictureName":  "vf4evo.jpg",
+      "fileName":  "VirtuaFighter4Evo_verb.bin",
+      "boardType":  "naomi2"
+  },
+  {
+      "name":  "VirtuaFighter4FinalTunedverB",
+      "pictureName":  "vf4tuned.jpg",
+      "fileName":  "VirtuaFighter4FinalTuned_verb.bin",
+      "boardType":  "naomi2"
+  },
+  {
+      "name":  "VirtuaStriker3",
+      "pictureName":  "virtuastriker3.jpg",
+      "fileName":  "VirtuaStriker3.bin",
+      "boardType":  "naomi2"
+  },
+  {
+      "name":  "F-Zero AX",
+      "pictureName":  "fzeroax.png",
+      "fileName":  "FZeroAx.bin",
+      "boardType":  "triforce"
+  },
+  {
+      "name":  "Mario Kart GP",
+      "pictureName":  "Mario_Kart_Arcade_GP.png",
+      "fileName":  "MarioKartGP.bin",
+      "boardType":  "triforce"
+  },
+  {
+      "name":  "Mario Kart GP 2",
+      "pictureName":  "mkagp2.jpg",
+      "fileName":  "MarioKartGP2.bin",
+      "boardType":  "triforce"
+  },
+  {
+      "name":  "Virtua Striker 2002",
+      "pictureName":  "Virtua_Striker.jpg",
+      "fileName":  "vs2002e.bin",
+      "boardType":  "triforce"
+  },
+  {
+      "name":  "Virtua Striker 4 2006",
+      "pictureName":  "vs4.jpg",
+      "fileName":  "vs406.bin",
+      "boardType":  "triforce"
+  },
+  {
+      "name":  "Virtua Striker 4 2006 Export",
+      "pictureName":  "vs4.jpg",
+      "fileName":  "Virtua_Striker_4_2006_Exp.bin",
+      "boardType":  "triforce"
+  },
+  {
+      "name":  "Crazy Taxi High Roller ",
+      "pictureName":  "crtaxihr.png",
+      "fileName":  "CrazyTaxiHighRoller",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Ghost Squad (version pour dimm de 512MB et d\u00271GB)",
+      "pictureName":  "gs.jpg",
+      "fileName":  "gdx0012a_-_Ghost_Squad.bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Ghost Squad - alternative dump",
+      "pictureName":  "gs.jpg",
+      "fileName":  "Ghost_Squad_Ver._A_512.bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Ghost Squad - alternative dump",
+      "pictureName":  "gs.jpg",
+      "fileName":  "Ghost_Squad_Ver._A_1GB.bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Gundam Battle Operating Simulator",
+      "pictureName":  "gundam.jpg",
+      "fileName":  "Gundam_Battle_Operating_Simulator.bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Ollie King",
+      "pictureName":  "ollie_king.jpg",
+      "fileName":  "Ollie_King_512.bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Ollie King",
+      "pictureName":  "ollie_king.jpg",
+      "fileName":  "Ollie_King_1GB.bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Out Run 2",
+      "pictureName":  "Outrun2.jpg",
+      "fileName":  "OR2_512.bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Out Run 2",
+      "pictureName":  "Outrun2.jpg",
+      "fileName":  "OR2_1gb.bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Out Run 2 BETA",
+      "pictureName":  "Outrun2.jpg",
+      "fileName":  "OR2BETA.bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Out Run 2 SP (version pour dimm d\u00271Gb)",
+      "pictureName":  "outrun2sp.jpg",
+      "fileName":  "or2sp_1gb.bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Outrun 2 Special Tours",
+      "pictureName":  "outrun2sp.jpg",
+      "fileName":  "Outrun_2_Special_Tours_512.bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Outrun 2 Special Tours",
+      "pictureName":  "outrun2sp.jpg",
+      "fileName":  "Outrun_2_Special_Tours_1GB.bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Sega Golf Club Version 2006 Next Tours Rev.A",
+      "pictureName":  "sega_golf.jpg",
+      "fileName":  "Sega_Golf_Club_Version_2006_Next_Tours_Rev.A_512.bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Sega Golf Club Version 2006 Next Tours Rev.A",
+      "pictureName":  "sega_golf.jpg",
+      "fileName":  "Sega_Golf_Club_Version_2006_Next_Tours_Rev.A_1GB.bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "The House Of The Dead 3",
+      "pictureName":  "hotd3.png",
+      "fileName":  "The_House_Of_The_Dead_3_GDX-0001.bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Virtua Cop 3",
+      "pictureName":  "vc3.jpg",
+      "fileName":  "Virtua_Cop_3_512.bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Virtua Cop 3",
+      "pictureName":  "vc3.jpg",
+      "fileName":  "Virtua_Cop_3_1GB.bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Wangan Midnight - Maximum Tune (EXP)",
+      "pictureName":  "wm.jpg",
+      "fileName":  "Wangan_Midnight_Maximum_Tune_EXPORT_(GDX-0009B).bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Wangan Midnight - Maximum Tune (EXP) - alternative dump",
+      "pictureName":  "wm.jpg",
+      "fileName":  "Wangan_Midnight_Maximum_Tune_EXP_512.bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Wangan Midnight - Maximum Tune (EXP) - alternative dump",
+      "pictureName":  "wm.jpg",
+      "fileName":  "Wangan_Midnight_Maximum_Tune_EXP_1GB.bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Wangan Midnight - Maximum Tune 2 (JAP)",
+      "pictureName":  "wg2.jpg",
+      "fileName":  "Wangan_Midnight_Maximum_Tune_2_JAP_(GDX-0015).bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Wangan Midnight - Maximum Tune 2 (EXP)",
+      "pictureName":  "wg2.jpg",
+      "fileName":  "Wangan_Midnight_Maximum_Tune_2_JAP_512.bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Wangan Midnight - Maximum Tune 2 (EXP)",
+      "pictureName":  "wg2.jpg",
+      "fileName":  "Wangan_Midnight_Maximum_Tune_2_JAP_1GB.bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Wangan Midnight - Maximum Tune 2 rev.B (EXP)",
+      "pictureName":  "wg2.jpg",
+      "fileName":  "Wangan_Midnight_Maximum_Tune_2B_EXP_512.bin",
+      "boardType":  "chihiro"
+  },
+  {
+      "name":  "Wangan Midnight - Maximum Tune 2 rev.B (EXP)",
+      "pictureName":  "wg2.jpg",
+      "fileName":  "Wangan_Midnight_Maximum_Tune_2B_EXP_1GB.bin",
+      "boardType":  "chihiro"
+  }
+]
