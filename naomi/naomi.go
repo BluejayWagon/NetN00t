@@ -7,6 +7,7 @@ import (
 	"hash/crc32"
 	"net"
 	"os"
+	"time"
 )
 
 func ConnectAndUploadRomToNaomi(ip string, filepath string) error {
@@ -24,6 +25,8 @@ func ConnectAndUploadRomToNaomi(ip string, filepath string) error {
 		return err
 	}
 	fmt.Println("DIMM file uploaded successfully")
+	// delay added here because this wouldn't work on Linux systems otherwise
+	time.Sleep(500 * time.Millisecond)
 	err = HostReboot(readWriter)
 	if err != nil {
 		return err
