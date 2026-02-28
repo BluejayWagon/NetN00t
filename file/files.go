@@ -14,6 +14,9 @@ type Config struct {
 	RomDirectory string `json:"romDirectory"`
 }
 
+// RomDetails represents the metadata for a single ROM, as defined in the romConfig.json file.
+// This is the structure used to parse the metadata from the JSON file.  It does not
+// include the file system details, which are combined later to produce FullRomDetails.
 type RomDetails struct {
 	Name        string `json:"name"`
 	PictureName string `json:"pictureName"`
@@ -25,6 +28,8 @@ type RomDetails struct {
 	Description string `json:"description,omitempty"`
 }
 
+// FullRomDetails combines the file system details with the metadata from romConfig.json.
+// This is the main structure used internally in the application for each ROM.
 type FullRomDetails struct {
 	Name        string
 	PictureName string
@@ -44,18 +49,6 @@ type RomSummary struct {
 	Name     string `json:"name"`
 	FileName string `json:"fileName"` // used to request further details or perform uploads
 	ImageUrl string `json:"imageUrl"`
-}
-
-// FrontendResponse is the original structure; it is still used by the old
-// list endpoint for compatibility or during migration, but the new
-// summary-oriented API will prefer RomSummary.
-type FrontendResponse struct {
-	Name        string `json:"name"`
-	ImageUrl    string `json:"imageUrl"`
-	BoardType   string `json:"boardType"`
-	Genre       string `json:"genre,omitempty"`
-	Tate        bool   `json:"tate,omitempty"`
-	Description string `json:"description,omitempty"`
 }
 
 type FileDetails struct {
@@ -170,29 +163,4 @@ func TransformFilesToSummaries(filelist []FileDetails) ([]RomSummary, error) {
 		})
 	}
 	return summaries, nil
-}
-
-// TransformFilesToFrontendResponse converts all of the information from the
-// embedded rom configuration plus the discovered file list into the full
-// frontend response objects.  This returns all metadata and is therefore
-// heavier; it is still available for existing callers.
-func TransformFilesToFrontendResponse(filelist []FileDetails) ([]FrontendResponse, error) {
-	romDetails, err := LoadRomDetailsFromEmbedded()
-	if err != nil {
-		return nil, err
-	}
-	transformedFiles := TransformFilesToRomDetails(filelist, romDetails)
-	// always initialize a non-nil slice so JSON encoder emits [] instead of null
-	transformedResponses := make([]FrontendResponse, 0, len(transformedFiles))
-	for _, rom := range transformedFiles {
-		transformedResponses = append(transformedResponses, FrontendResponse{
-			Name:        rom.Name,
-			ImageUrl:    "/images/" + strings.TrimSpace(rom.PictureName),
-			BoardType:   rom.BoardType,
-			Genre:       rom.Genre,
-			Tate:        rom.Tate,
-			Description: rom.Description,
-		})
-	}
-	return transformedResponses, nil
 }
