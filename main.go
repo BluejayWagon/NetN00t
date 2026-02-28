@@ -70,12 +70,24 @@ func main() {
 	}
 	http.Handle("/images/", http.StripPrefix("/images/", http.FileServer(http.FS(subImageFS))))
 
+	// Initialize the ROM cache at startup
+	fmt.Println("Initializing ROM cache...")
+	err = web.InitializeROMCache(configuration.RomDirectory)
+	if err != nil {
+		fmt.Println("Error initializing ROM cache:", err)
+		return
+	}
+	fmt.Println("ROM cache initialized successfully")
+
 	// Handle API requests
 	http.HandleFunc("/api/upload", func(w http.ResponseWriter, r *http.Request) {
 		web.UploadHandler(w, r, configuration.RomDirectory)
 	})
-	fmt.Println(configuration)
+	// lightweight list of roms (name/picture only)
 	http.HandleFunc("/api/listfiles", web.ListFilesHandler(configuration.RomDirectory))
+	// detailed metadata for a single rom; query param: fileName
+	http.HandleFunc("/api/rom", web.RomDetailsHandler(configuration.RomDirectory))
+	fmt.Println(configuration)
 
 	http.ListenAndServe(":8080", nil)
 }

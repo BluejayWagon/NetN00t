@@ -3,906 +3,1359 @@
       "name":  "18Wheeler(DLX)",
       "pictureName":  "18wheeler.jpg",
       "fileName":  "18_Wheeler_DX.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Racing",
+      "tate": false,
+      "description": "Deluxe version of Sega's over-the-top trucking game. Race an 18-wheel big rig across America against rival truckers, dodging traffic and completing deliveries before time runs out. Features a large sit-down cabinet with a steering wheel and force feedback."
   },
   {
       "name":  "18Wheeler(STD)",
       "pictureName":  "18wheeler.jpg",
       "fileName":  "18_Wheeler_STD.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Racing",
+      "tate": false,
+      "description": "Standard version of Sega's 18-Wheeler: American Pro Trucker. Players haul cargo across the US in a massive big rig, racing against a rival truck while avoiding traffic. A classic Sega arcade racer with arcade-style handling and flashy presentation."
   },
   {
       "name":  "AirlinePilot",
       "pictureName":  "airlinepilots.jpg",
       "fileName":  "AirlinePilots.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Simulation / Flight",
+      "tate": false,
+      "description": "A commercial flight simulator from Sega that puts players in the cockpit of a passenger airliner. Complete various flight missions including takeoff, landing, and emergency scenarios across different airports worldwide."
   },
   {
       "name":  "AkatsukiBlitzkampfAufAsche",
       "pictureName":  "akatsuki.jpg",
       "fileName":  "Akatsuki_Bk_Ausf_Achse.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "An enhanced arcade port of the doujin fighting game Akatsuki Blitzkampf, subtitled Ausf. Achse. Set in an alternate post-WWII world, players choose from a cast of unique fighters with special abilities. Features fast-paced 2D combat with anime-style visuals."
   },
   {
       "name":  "AlienFront",
       "pictureName":  "alienfront.jpg",
       "fileName":  "AlienFront.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Shoot 'em Up / Tank Combat",
+      "tate": false,
+      "description": "A third-person tank combat game from Sega set during an alien invasion. Players pilot a futuristic tank through urban environments blasting extraterrestrial enemies. Supports two-player simultaneous play with one player controlling humans and the other aliens."
   },
   {
       "name":  "AzumangaDaiohPuzzleBobble",
       "pictureName":  "azumanga.jpg",
       "fileName":  "AzumangaDaiohPuzzleBobble_v3.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Puzzle",
+      "tate": false,
+      "description": "A Puzzle Bobble (Bust-A-Move) variant themed around the popular Azumanga Daioh manga and anime series. Players shoot colored bubbles to clear the screen by matching groups of three or more. Features characters and visuals from the beloved slice-of-life comedy."
   },
   {
       "name":  "BorderDown",
       "pictureName":  "bdrdown.png",
       "fileName":  "BorderDown_v3.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Shoot 'em Up",
+      "tate": true,
+      "description": "A horizontal scrolling shoot 'em up by G.rev with a unique 'border' system where getting hit drops you to a lower difficulty border rather than killing you outright. Features three distinct routes (borders) through each stage with impressive visuals for the hardware."
   },
   {
       "name":  "BurningCasino",
       "pictureName":  "burningc.jpg",
       "fileName":  "BurningCasino_v3.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Casino / Mini-games",
+      "tate": false,
+      "description": "A casino-themed collection of mini-games for the Naomi platform. Includes various gambling-style games such as slots, poker, and other casino staples, wrapped in an energetic arcade presentation."
   },
   {
       "name":  "Capcomvs.SNK2M.Fighting2001",
       "pictureName":  "cvsgd.png",
       "fileName":  "Capcom_Vs_SNK_2_Millionaire_Fighting_2001.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "The sequel to Capcom vs. SNK, featuring an even larger roster of fighters from both companies' iconic franchises. Introduces the Groove System allowing players to choose between six fighting styles inspired by classic Capcom and SNK games. Widely considered one of the greatest 2D fighting games ever made."
   },
   {
       "name":  "Capcomvs.SNKM.Fight2K",
       "pictureName":  "cvs2gd.png",
       "fileName":  "Capcom_vs_SNK_Millenium_Fight_2000.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "The original Capcom vs. SNK crossover fighting game, pitting Street Fighter characters against the King of Fighters roster and more. Features a ratio system for team building and two fighting styles (Capcom and SNK). A landmark crossover title for 2D fighting game fans."
   },
   {
       "name":  "Capcomvs.SNKM.Fight2KPro",
       "pictureName":  "cvsgd.png",
       "fileName":  "Capcom_vs_SNK_Millenium_Fight_2000_Pro.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "An updated version of Capcom vs. SNK Millennium Fight 2000 with balance adjustments, additional characters, and gameplay refinements. Adds new fighters to the roster and expands the fighting groove options compared to the original release."
   },
   {
       "name":  "ChaosField",
       "pictureName":  "chaosfield.jpg",
       "fileName":  "ChaosField_v3.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Shoot 'em Up",
+      "tate": true,
+      "description": "A vertical scrolling shoot 'em up by Milestone featuring a unique dual-world mechanic. Players can switch between the normal 'Order Field' and the chaotic 'Chaos Field,' each with different enemy patterns and gameplay rules. Known for its intense bullet patterns and strategic depth."
   },
   {
       "name":  "CleopatraFortunePlus",
       "pictureName":  "cleof.jpg",
       "fileName":  "CleopatraFortunePlus_v6.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Puzzle",
+      "tate": true,
+      "description": "An enhanced version of Taito's Cleopatra Fortune, a falling-block puzzle game with an ancient Egypt theme. Players drop gems and sarcophagi to surround and eliminate jewels. The Plus version adds new content and refinements to the original beloved puzzler."
   },
   {
       "name":  "ConfidentialMission",
       "pictureName":  "confmiss.png",
       "fileName":  "ConfidentialMission.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Light Gun Shooter",
+      "tate": false,
+      "description": "A spy-themed light gun shooter from Sega inspired by classic James Bond films. Players take on the role of elite agents blasting through enemy bases, vehicles, and bosses. Supports two-player co-op and features branching mission paths."
   },
   {
       "name":  "CosmicSmash",
       "pictureName":  "csmash.png",
       "fileName":  "CosmicSmash.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Sports / Action",
+      "tate": false,
+      "description": "A futuristic Breakout/squash hybrid from Sega with stunning minimalist visuals. Players smash a ball against glowing blocks in a walled court, clearing each stage before time runs out. Praised for its clean aesthetic and addictive gameplay."
   },
   {
       "name":  "CrazyTaxi",
       "pictureName":  "crazytaxi.jpg",
       "fileName":  "CrazyTaxi.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Racing / Action",
+      "tate": false,
+      "description": "Sega's iconic open-world taxi racing game. Players pick up customers and race across a vibrant city to their destinations as fast as possible, earning big fares through daring driving and close calls. Features a punk rock soundtrack and became one of the most recognizable Dreamcast-era games."
   },
   {
       "name":  "DeadorAlive2",
       "pictureName":  "doa2.png",
       "fileName":  "DeadOrAlive2.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "Tecmo's fast-paced 3D fighting game featuring fluid countering mechanics, multi-tiered stages, and a diverse cast of martial artists. The arcade original that spawned the acclaimed console version, known for its emphasis on defensive play and cinematic stage interactions."
   },
   {
       "name":  "DeadorAlive2Millenium",
       "pictureName":  "doa2m.png",
       "fileName":  "DeadOrAlive2Millenium.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "An updated version of Dead or Alive 2 featuring additional characters, stages, and gameplay refinements. This Millennium edition adds content and polish to the already excellent original, further expanding the DOA2 experience."
   },
   {
       "name":  "DeathCrimsonOX",
       "pictureName":  "deathcox.png",
       "fileName":  "DeathCrimsonOX.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Light Gun Shooter",
+      "tate": false,
+      "description": "A light gun shooter from Ecole Software, serving as a reimagining of the infamously difficult Death Crimson series. Players blast through hordes of monsters and bosses. Considered a significant improvement over its notorious predecessors with competent gunplay and arcade action."
   },
   {
       "name":  "DokiDokiIdolStarSeeker",
       "pictureName":  "dokidoki.png",
       "fileName":  "DokiDokiIdolStarSeeker.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Rhythm / Music",
+      "tate": false,
+      "description": "A Japan-exclusive idol rhythm and simulation game for the Naomi. Players support their favorite pop idol by timing button presses to music and managing their idol's career. Aimed at fans of the Japanese idol culture genre."
   },
   {
       "name":  "DolphinBlue",
       "pictureName":  "dolphinb.png",
       "fileName":  "dol222.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Run and Gun",
+      "tate": false,
+      "description": "A run-and-gun action game from Sammy set in a futuristic oceanic world. Players blast through waves of enemies in colorful underwater environments. Notable for its lush visuals and fast action gameplay reminiscent of Metal Slug."
   },
   {
       "name":  "DynamiteDekaEx",
       "pictureName":  "dybb99.png",
       "fileName":  "DynamiteDekaEx.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Beat 'em Up",
+      "tate": false,
+      "description": "Also known as Die Hard Arcade 2, this is the sequel to Sega's Dynamite Deka beat 'em up series. Players brawl through corridors with an arsenal of weapons and hand-to-hand combat moves. Features co-op play and over-the-top action inspired by action movies."
   },
   {
       "name":  "FistoftheNorthStar",
       "pictureName":  "fotns.png",
       "fileName":  "FOTNS_Naomi2_Fixed.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "A 3D fighting game based on the classic manga/anime Fist of the North Star (Hokuto no Ken). Features iconic characters like Kenshiro, Raoh, and Toki battling it out with their signature pressure-point martial arts techniques. Developed by Sega's AM2 team on the Naomi 2 hardware."
   },
   {
       "name":  "GiantGram2KZnProWrestle3",
       "pictureName":  "gram2000.png",
       "fileName":  "Giant_Gram_2000.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Wrestling",
+      "tate": false,
+      "description": "Giant Gram 2000: All Japan Pro Wrestling 3, a 3D arcade wrestling game featuring real All Japan Pro Wrestling stars. Known for its realistic and technical wrestling gameplay, large roster of Japanese pro wrestlers, and satisfying grapple mechanics."
   },
   {
       "name":  "GiantGramZen.ProWrestle2",
       "pictureName":  "gram2000.png",
       "fileName":  "Giant_Gram_EPR-21820_PATCHED.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Wrestling",
+      "tate": false,
+      "description": "The second entry in Sega's Giant Gram series, featuring All Japan Pro Wrestling superstars in a 3D wrestling game. Builds on the original with an expanded roster and refined mechanics, faithfully representing the stiff, technical style of All Japan wrestling."
   },
   {
       "name":  "Gigawing2",
       "pictureName":  "gigawing2.jpg",
       "fileName":  "GigaWing2.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Shoot 'em Up",
+      "tate": true,
+      "description": "The sequel to Capcom's GigaWing, a vertical bullet-hell shooter featuring a reflect barrier mechanic that lets players absorb and reflect enemy fire. Set in a dieselpunk WWII-era world with four unique pilots and ships. Infamous for its screen-filling bullet patterns and massive score multipliers."
   },
   {
       "name":  "GuiltyGearXX",
       "pictureName":  "ggx.png",
       "fileName":  "GuiltyGearXX.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "The original release of Guilty Gear XX (The Midnight Carnival), Arc System Works' acclaimed anime fighting game. Features a large roster of unique characters, deep combo systems, and a rocking metal soundtrack. The base version that spawned numerous revisions."
   },
   {
       "name":  "GuiltyGearXXAccentCore",
       "pictureName":  "ggxx.png",
       "fileName":  "GuiltyGearXXAccentCore_v6.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "One of the final and most refined revisions of Guilty Gear XX. Accent Core adds new moves, balance changes, and the fan-favorite Force Roman Cancel mechanic. Widely regarded as the definitive version of GG XX with improved gameplay across all characters."
   },
   {
       "name":  "GuiltyGearXXReload",
       "pictureName":  "ggxxrl.png",
       "fileName":  "GuiltyGearXXReload.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "An updated revision of Guilty Gear XX featuring rebalanced characters, new moves, and additional story content. Reload was a significant update that helped define the competitive meta of the Guilty Gear XX series."
   },
   {
       "name":  "GuiltyGearXXSlash",
       "pictureName":  "ggxxsla.png",
       "fileName":  "GuiltyGearXXSlash_v6.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "A revision of Guilty Gear XX featuring major gameplay overhauls including changes to the burst mechanic and character rebalancing. Slash streamlined the pace of matches and introduced a more accessible combo structure while maintaining the series' depth."
   },
   {
       "name":  "Gunspike",
       "pictureName":  "gunspike.jpg",
       "fileName":  "GunSpike.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Shoot 'em Up / Action",
+      "tate": false,
+      "description": "Also known as Cannon Spike, this is a top-down shooter by Capcom featuring chibi versions of iconic Capcom characters including Cammy, Charlie, B.B. Hood, and Arthur. Players blast through arenas of enemies using each character's unique weapons and special moves."
   },
   {
       "name":  "HeavyMetalGeomatrix",
       "pictureName":  "hmgeo.png",
       "fileName":  "HeavyMetalGeomatrix.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting / Action",
+      "tate": false,
+      "description": "A mecha fighting game for the Naomi featuring large robotic suits battling across various arenas. Players pilot customizable mechs with unique weapon loadouts and special attacks. Notable for its 3D arenas and the freedom of movement in combat."
   },
   {
       "name":  "Ikaruga",
       "pictureName":  "ikaruga.png",
       "fileName":  "Ikaruga_v3.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Shoot 'em Up",
+      "tate": true,
+      "description": "Treasure's legendary vertical shoot 'em up and one of the most acclaimed arcade games ever made. Built around a black/white polarity switching mechanic where players must absorb same-colored bullets while shooting enemies of the opposite color. Demands precision, memorization, and mastery — a timeless classic."
   },
   {
       "name":  "Illvelo",
       "pictureName":  "irubero.jpg",
       "fileName":  "Illvelo_v6.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Shoot 'em Up",
+      "tate": true,
+      "description": "A vertical shoot 'em up by Milestone that combines bullet-hell mechanics with RPG-style power-up systems. Players collect items to power up their ship in varied ways across multiple character routes. Known for its quirky art style and inventive scoring system."
   },
   {
       "name":  "JamboSafari",
       "pictureName":  "jambo.jpg",
       "fileName":  "Jambo_Safari.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Action / Arcade",
+      "tate": false,
+      "description": "A unique Sega arcade game where players are wildlife rangers who must capture African animals using a special lasso gun. Features a variety of animals to tranquilize and wrangle across beautiful savanna environments. A charming and unusual Sega arcade title."
   },
   {
       "name":  "JingyStormTheArcade",
       "pictureName":  "jingystm.png",
       "fileName":  "JingyStormTheArcade.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "An arcade fighting game based on the Chinese manga/anime series Jing: King of Bandits. Features characters from the series battling it out in 2D with flashy special moves and stylized anime aesthetics."
   },
   {
       "name":  "Karous",
       "pictureName":  "karous.png",
       "fileName":  "karous_v3.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Shoot 'em Up",
+      "tate": true,
+      "description": "A vertical bullet-hell shoot 'em up by Milestone and the spiritual successor to Chaos Field and Radirgy. Features a dark fantasy aesthetic with angels and demons, a blade weapon for close-range combat, and intense scoring mechanics. One of the final major shmups on the Naomi platform."
   },
   {
       "name":  "KnightsofValorSevenSpirits",
       "pictureName":  "kov7sprt.jpg",
       "fileName":  "kov7spirits.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Beat 'em Up",
+      "tate": false,
+      "description": "An enhanced version of IGS's Knights of Valor, a side-scrolling beat 'em up set in the world of the Chinese classic Romance of the Three Kingdoms. The Seven Spirits edition adds new characters and stages to the already content-rich original."
   },
   {
       "name":  "KuruKuruChameleon",
       "pictureName":  "kurucham.png",
       "fileName":  "KuruKuruChameleon_v3.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Puzzle",
+      "tate": false,
+      "description": "A colorful puzzle game featuring a chameleon that changes colors. Players must match colors or navigate color-based puzzles in this cute and family-friendly arcade title."
   },
   {
       "name":  "LaKeyboardxyu",
       "pictureName":  "keyboard.png",
       "fileName":  "LaKeyboardxyu_v3.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Typing / Educational",
+      "tate": false,
+      "description": "A Japanese typing game for the Naomi that uses a keyboard peripheral. Players practice typing Japanese text (kana/romaji) in a fun arcade format, competing to type accurately and quickly. Part of a growing genre of typing arcade games popular in Japan."
   },
   {
       "name":  "Lupin3TheShooting",
       "pictureName":  "lupinsho.png",
       "fileName":  "Lupin3-TheShooting.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Light Gun Shooter",
+      "tate": false,
+      "description": "A light gun shooter based on the classic Lupin III anime/manga franchise. Players take on the role of Lupin and company in stylized action sequences lifted from the series. Features the iconic characters and humor of the beloved thief anime in an arcade shooter format."
   },
   {
       "name":  "LupinTheTyping",
       "pictureName":  "lupboardType.png",
       "fileName":  "Lupin-TheTyping.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Typing / Educational",
+      "tate": false,
+      "description": "A typing game themed around the Lupin III anime series, using the Naomi's keyboard peripheral. Players type words and phrases to help Lupin and his gang complete heists and escape from Inspector Zenigata. Combines the beloved IP with the popular typing game genre."
   },
   {
       "name":  "Mamoru-kunwaNoro.Shimatta!",
       "pictureName":  "moeru.png",
       "fileName":  "mamonorov6.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Shoot 'em Up",
+      "tate": true,
+      "description": "A vertical bullet-hell shoot 'em up by G.rev with a colorful, comedic art style. Players control Mamoru-kun, a young superhero defending his town from waves of cute but dangerous enemies. Known for its vibrant visuals, energetic music, and accessible-yet-deep scoring system."
   },
   {
       "name":  "Marvelvs.Capcom2",
       "pictureName":  "mvsc2.png",
       "fileName":  "MarvelVsCapcom2.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "One of the most beloved crossover fighting games of all time. Capcom's tag-team fighter features 56 characters from Marvel Comics and Capcom's back catalog doing battle in chaotic 3-vs-3 matches. Famous for its jazz/lounge soundtrack, insane assist system, and enduring competitive scene."
   },
   {
       "name":  "MazeoftheKing",
       "pictureName":  "mok.png",
       "fileName":  "TheMazeOfTheKings.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Beat 'em Up",
+      "tate": false,
+      "description": "A dungeon-crawling beat 'em up for the Naomi where players navigate mazes while battling enemies. Features a variety of weapons and items to collect as players fight through increasingly dangerous floors in search of the king."
   },
   {
       "name":  "MeltyBloodActCadenza[A]",
       "pictureName":  "meltybld.png",
       "fileName":  "MeltyBloodActCadenza(RevA).bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "The first arcade revision of Melty Blood Act Cadenza, an expanded arcade version of the popular doujin visual novel fighting game by Type-Moon and French-Bread. Features characters from Tsukihime with unique moon phase mechanics affecting gameplay. Revision A includes initial balance and character updates."
   },
   {
       "name":  "MeltyBloodActCadenza[B]",
       "pictureName":  "meltyb.png",
       "fileName":  "MeltyBloodActCadenzaVerB_v3.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "Version B of Melty Blood Act Cadenza featuring further balance adjustments and refinements to the cast. This version expanded the competitive scene and is a key entry in the doujin-to-arcade fighter genre, known for its deep moon-style system."
   },
   {
       "name":  "MeltyBloodActCadenza[B2]",
       "pictureName":  "meltyba.png",
       "fileName":  "MeltyBloodActCadenzaVerB2_v3.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "Version B2 of Melty Blood Act Cadenza, a further update refining the balance and mechanics of Ver.B. This iterative update was widely played in Japanese arcades and helped cement Melty Blood's reputation as a premier doujin fighting game."
   },
   {
       "name":  "MeltyBloodActressAgain",
       "pictureName":  "meltyba.png",
       "fileName":  "MeltyBloodActressAgain_v6.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "The follow-up to Act Cadenza, Actress Again greatly expanded the roster and introduced the Crescent/Half/Full Moon system giving each character three distinct fighting styles. A massive leap forward for the series, played competitively in Japan for years."
   },
   {
       "name":  "MeltyBloodActressAgainNP",
       "pictureName":  "meltyba.png",
       "fileName":  "MeltyBloodActressAgain.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "An alternate dump of Melty Blood Actress Again for the Naomi platform. Same content as the standard release — a deep anime fighter with the expanded moon-style system — in an unpatched ROM format."
   },
   {
       "name":  "MobSuitGundamFed.VsZeon",
       "pictureName":  "gundmgd.png",
       "fileName":  "MobileSuitGundam-FederationVsZeon.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Action / Vs. Fighter",
+      "tate": false,
+      "description": "Capcom's action game set in the Universal Century Gundam universe, pitting Earth Federation mobile suits against the Principality of Zeon. A 2-vs-2 team action game with the frantic energy of a Vs. Capcom title, featuring iconic suits like the RX-78-2 Gundam and Zaku II."
   },
   {
       "name":  "MobSuitGundamFed.VsZeonDX",
       "pictureName":  "gundmxgd.png",
       "fileName":  "MobileSuitGundam-FederationVsZeonDX.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Action / Vs. Fighter",
+      "tate": false,
+      "description": "The DX (Deluxe) expansion to Mobile Suit Gundam: Federation vs. Zeon, featuring additional mobile suits, maps, and missions from the original Gundam TV series. Expanded the roster significantly and became a cult hit in Japan's arcade scene."
   },
   {
       "name":  "MonkeyBall",
       "pictureName":  "monkeyba.png",
       "fileName":  "MonkeyBall.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Puzzle / Action",
+      "tate": false,
+      "description": "The original arcade version of Super Monkey Ball that inspired the beloved GameCube franchise. Players tilt a platform to roll a monkey encased in a transparent ball through a series of elevated stages without falling off. Simple to learn but brutally challenging to master."
   },
   {
       "name":  "MusapeysChocoMarker",
       "pictureName":  "chocomk.png",
       "fileName":  "MusapeysChocoMarker.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Puzzle",
+      "tate": false,
+      "description": "A Japan-exclusive puzzle game for the Naomi featuring a cute character named Musapey. Players use a marker-like mechanic to solve color-based puzzles. A lesser-known but charming arcade puzzler with a distinctive hand-drawn art style."
   },
   {
       "name":  "NomisoKoneKonePuzzleTakoron",
       "pictureName":  "konekone.jpg",
       "fileName":  "NoukonePuzzleTakoron.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Puzzle",
+      "tate": false,
+      "description": "A Japan-exclusive falling-block style puzzle game featuring Takoron, an octopus-like character. Players arrange and match colored blocks in this family-friendly arcade puzzler with a cute aquatic theme."
   },
   {
       "name":  "PowerStone",
       "pictureName":  "pstone.png",
       "fileName":  "Powerstone.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting / Action",
+      "tate": false,
+      "description": "Capcom's unique 3D arena fighting game with full freedom of movement. Players collect power stones scattered around destructible arenas to transform into a super-powered form. Features a cast of colorful, globe-trotting characters and fast, chaotic multiplayer action."
   },
   {
       "name":  "PowerStone2",
       "pictureName":  "pstone2.png",
       "fileName":  "PowerStone2.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting / Action",
+      "tate": false,
+      "description": "The sequel to Power Stone, expanding the arena fighting formula to four-player simultaneous battles. Features larger, more dynamic stages with interactive elements and weapons, along with an adventure mode. A chaotic and endlessly fun multiplayer experience."
   },
   {
       "name":  "ProjectJusticeRivalSchool2",
       "pictureName":  "projectjustice.jpg",
       "fileName":  "RivalSchools2-ProjectJustice.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "Capcom's sequel to Rival Schools, featuring students and teachers from various high schools battling it out. Adds team-up combo attacks, new characters, and 3D stages with more fluid movement than its predecessor. A beloved but underappreciated entry in the Capcom fighting game library."
   },
   {
       "name":  "Psyvariar2",
       "pictureName":  "psyvar2.png",
       "fileName":  "Psyvariar2_v6.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Shoot 'em Up",
+      "tate": true,
+      "description": "A vertical bullet-hell shoot 'em up in the Psyvariar series, famous for its unique 'buzz' mechanic that rewards players for grazing enemy bullets to level up their ship. Psyvariar 2 refines the system further with expanded routes and a pulsing techno soundtrack."
   },
   {
       "name":  "PuyoPuyoDa",
       "pictureName":  "puyofev.png",
       "fileName":  "Puyo_Puyo_Da_EPR-22206_PATCHED.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Puzzle",
+      "tate": false,
+      "description": "A dancing/rhythm spin-off game in the Puyo Puyo series. Rather than the standard falling-block gameplay, Puyo Puyo Da! has players matching dance moves with the beloved Puyo characters in a rhythm-game format with colorful, energetic presentation."
   },
   {
       "name":  "PuyoPuyoFever",
       "pictureName":  "puyofev.png",
       "fileName":  "PuyoPuyoFever_v6.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Puzzle",
+      "tate": false,
+      "description": "A major entry in Sega's Puyo Puyo falling-block puzzle series. Fever introduces the Fever Mode mechanic where players can build up a gauge to trigger a pre-set chain combo, making comebacks more exciting. Features a new cast of characters alongside returning favorites."
   },
   {
       "name":  "QuizKeitaiQMode",
       "pictureName":  "quizqgd.png",
       "fileName":  "QuizKeitaiQMode.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Quiz / Trivia",
+      "tate": false,
+      "description": "A Japan-exclusive quiz game for the Naomi that simulates a mobile phone interface for answering trivia questions. Players work through various question categories in a trivia game format styled around early 2000s Japanese mobile culture."
   },
   {
       "name":  "Radirgy",
       "pictureName":  "radirgy.png",
       "fileName":  "Radirgy_v3.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Shoot 'em Up",
+      "tate": true,
+      "description": "A vertical shoot 'em up by Milestone with a distinctive cel-shaded anime visual style set in a world where wireless internet signals have become weaponized. Players slash and shoot through colorful enemies with a unique blade weapon mechanic. Known for its striking visual presentation."
   },
   {
       "name":  "RadirgyNoa",
       "pictureName":  "radirgy.png",
       "fileName":  "RadirgyNoa_v6.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Shoot 'em Up",
+      "tate": true,
+      "description": "The sequel to Radirgy, continuing the cel-shaded wireless internet shoot 'em up universe. Radirgy Noa expands on the original's blade-based gameplay with new ships, stages, and a refined scoring system while maintaining the distinctive visual style."
   },
   {
       "name":  "SambadeAmigo",
       "pictureName":  "samba.png",
       "fileName":  "Samba_De_Amigo_EPR-22966B_Patched.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Rhythm / Music",
+      "tate": false,
+      "description": "Sega's iconic maracas rhythm game featuring Amigo the monkey shaking maracas to Latin and pop music. Players use the maraca controllers to hit notes at three different heights in time with the music. A massively popular and uniquely joyful arcade experience."
   },
   {
       "name":  "SegaMarineFishing",
       "pictureName":  "segamarinefishing.jpg",
       "fileName":  "Sega_Marine_Fishing_EPR-22221.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fishing / Simulation",
+      "tate": false,
+      "description": "Sega's arcade fishing game where players use a rod controller to catch a variety of ocean fish. Features realistic fishing mechanics including casting, reeling, and fighting the fish. A relaxing and surprisingly deep arcade experience."
   },
   {
       "name":  "SegaStrikeFighter",
       "pictureName":  "ss2005.png",
       "fileName":  "SegaStrikeFighter.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Shoot 'em Up / Flight",
+      "tate": false,
+      "description": "An arcade jet combat game from Sega where players pilot fighter aircraft through missions, shooting down enemy planes and ground targets. Features fast-paced arcade flight action with power-ups and boss encounters."
   },
   {
       "name":  "SegaTetris",
       "pictureName":  "tetkiwam.png",
       "fileName":  "SegaTetris.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Puzzle",
+      "tate": true,
+      "description": "Sega's official arcade Tetris release for the Naomi platform. Features the classic falling-block gameplay with Sega's characteristic polish and presentation, intended for competitive arcade play."
   },
   {
       "name":  "SenkonoRonde",
       "pictureName":  "senko.png",
       "fileName":  "senkov3.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Shoot 'em Up / Fighting",
+      "tate": true,
+      "description": "A unique vertical shooter/fighting hybrid by G.rev where players control 'Rounder' mechs that can both shoot enemies and engage in close-range combat with other Rounders. Features a distinctive mix of bullet-hell evasion and fighting game-style boss battles."
   },
   {
       "name":  "SenkonoRondeNewVer",
       "pictureName":  "senko.png",
       "fileName":  "senkonewv6.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Shoot 'em Up / Fighting",
+      "tate": true,
+      "description": "An updated version of Senko no Ronde with balance adjustments and new content. Refines the shooter/fighting hybrid gameplay of the original with tweaked Rounder abilities and new stages."
   },
   {
       "name":  "SenkonoRondeSP",
       "pictureName":  "senko.png",
       "fileName":  "SenkoNoRondeSP_v3.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Shoot 'em Up / Fighting",
+      "tate": true,
+      "description": "The Special edition of Senko no Ronde, featuring additional content and refinements to the shooter/fighting hybrid formula. Adds new Rounders and stages to the already creative mech combat system."
   },
   {
       "name":  "ShikigaminoShiroII",
       "pictureName":  "shikgam2.png",
       "fileName":  "ShikigamiNoShiroII_v6.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Shoot 'em Up",
+      "tate": true,
+      "description": "Castle of Shikigami II, a vertical bullet-hell shoot 'em up set in modern Tokyo with supernatural horror themes. Players choose from a cast of unique characters with distinct shot types and story branches. Features a tension meter that multiplies point values when flying close to enemy bullets."
   },
   {
       "name":  "ShootingLove2007-Exzeal",
       "pictureName":  "exzeal.jpg",
       "fileName":  "ShootingLove2007-Exzeal_v6.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Shoot 'em Up",
+      "tate": true,
+      "description": "Part of Triangle Service's Shooting Love series, Exzeal is a vertical shoot 'em up known for its high difficulty and intricate scoring system. Features fast-paced bullet patterns and a retro aesthetic that pays homage to classic arcade shooters."
   },
   {
       "name":  "SlashOut",
       "pictureName":  "slashout.png",
       "fileName":  "Slashout.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Beat 'em Up",
+      "tate": false,
+      "description": "A 3D beat 'em up by Sega with hack-and-slash gameplay across a variety of fantasy and action-themed stages. Players choose from different fighters and battle through waves of enemies using melee combos and special moves."
   },
   {
       "name":  "Spawn",
       "pictureName":  "spawn.png",
       "fileName":  "spawn.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "A fighting game based on Todd McFarlane's Spawn comic book character. Features the dark, gritty aesthetic of the comics with Spawn and other characters from the series battling it out in a 3D fighting game format."
   },
   {
       "name":  "SpikersBattle",
       "pictureName":  "spkrbtl.png",
       "fileName":  "SpikersBattle.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Sports / Volleyball",
+      "tate": false,
+      "description": "An arcade volleyball game for the Naomi featuring fast-paced beach and indoor volleyball action. Players compete in energetic matches using powerful spikes, blocks, and sets with a roster of distinct athletes."
   },
   {
       "name":  "SportsJam",
       "pictureName":  "sprtjam.png",
       "fileName":  "SportsJam.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Sports / Mini-games",
+      "tate": false,
+      "description": "A multi-sport arcade compilation from Sega featuring a variety of quick-play sports mini-games. Includes events like basketball, tennis, and other athletic challenges in an accessible pick-up-and-play arcade format."
   },
   {
       "name":  "StreetFighterZero3Upper",
       "pictureName":  "sfz3ugd.png",
       "fileName":  "StreetFighterZero3Upper.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "The Naomi port of Street Fighter Zero 3 (Alpha 3) Upper edition, an enhanced version of Capcom's acclaimed Street Fighter Alpha 3. Adds additional characters and balancing to the already massive roster. Widely considered one of the best 2D Street Fighter games with its extensive ism system."
   },
   {
       "name":  "SuperShanghai2005",
       "pictureName":  "ss2005.png",
       "fileName":  "SuperShanghai2005_v6.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Puzzle / Mahjong Solitaire",
+      "tate": false,
+      "description": "An updated version of the classic Shanghai mahjong tile-matching solitaire game. Players remove matching pairs of tiles from a stacked arrangement until the board is cleared. The 2005 edition features updated graphics and new tile layouts."
   },
   {
       "name":  "SuperShanghai2005[A]",
       "pictureName":  "ss2005.png",
       "fileName":  "SuperShanghai2005VerA_v6.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Puzzle / Mahjong Solitaire",
+      "tate": false,
+      "description": "Version A revision of Super Shanghai 2005, the classic mahjong tile-matching solitaire game. Features the same tile-clearing gameplay with potential balance and content updates over the base version."
   },
   {
       "name":  "TetrisKiwamemichi",
       "pictureName":  "tetkiwam.png",
       "fileName":  "TetrisKiwamemichi_v6.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Puzzle",
+      "tate": true,
+      "description": "A Japan-exclusive Tetris variant for the Naomi featuring unique rule sets and modes not found in standard Tetris releases. Includes challenging gameplay variations aimed at advanced Tetris players seeking a deeper puzzle experience."
   },
   {
       "name":  "ToyFighter",
       "pictureName":  "toyfight.png",
       "fileName":  "ToyFighter.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "A quirky 3D fighting game from Sega featuring toy-sized fighters battling across giant household environments. Characters are depicted as living toys fighting on oversized furniture and floors, giving the game a unique and charming visual perspective."
   },
   {
       "name":  "TriggerHeartExelica",
       "pictureName":  "trgheart.png",
       "fileName":  "TriggerHeartExelica_v6.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Shoot 'em Up",
+      "tate": true,
+      "description": "A vertical shoot 'em up by Warashi featuring android girls battling through bullet-hell stages. The standout mechanic is a chain anchor that allows players to grab enemies, swing them around as shields, and fling them into other foes. Features anime-style characters and intense bullet patterns."
   },
   {
       "name":  "Trizeal",
       "pictureName":  "trizeal.png",
       "fileName":  "Trizeal_v3.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Shoot 'em Up",
+      "tate": true,
+      "description": "A vertical shoot 'em up by Triangle Service featuring a transforming fighter that can switch between three weapon configurations on the fly. Each form has distinct shot types suited to different situations. Known for its clean retro aesthetic and satisfying power-up system."
   },
   {
       "name":  "TypingoftheDead",
       "pictureName":  "totd.png",
       "fileName":  "TheTypingOfTheDead.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Typing / Horror",
+      "tate": false,
+      "description": "Sega's legendary typing game that transforms House of the Dead 2 into a keyboard-based zombie shooter. Players must quickly type displayed words to kill approaching zombies. An iconic and genuinely effective typing trainer wrapped in ridiculous undead mayhem."
   },
   {
       "name":  "UnderDefeat",
       "pictureName":  "undefeat.png",
       "fileName":  "UnderDefeat_v3.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Shoot 'em Up",
+      "tate": true,
+      "description": "A vertical shoot 'em up by G.rev set in a WWII-era alternate world where players pilot a German helicopter gunship. Features a unique rotation mechanic where the helicopter can be angled left and right to change shot direction. Known for its gritty military aesthetic and tight gameplay."
   },
   {
       "name":  "UsaguiYamashiroMahjongHen",
       "pictureName":  "usagui.png",
       "fileName":  "Usagui-YamashiroMahjongHen_v3.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Mahjong",
+      "tate": false,
+      "description": "A mahjong game based on the Usagui manga, which features competitive gambling mahjong as its core theme. Players engage in intense mahjong matches themed around the manga's storyline and characters."
   },
   {
       "name":  "VirtuaAthlete",
       "pictureName":  "vathlete.png",
       "fileName":  "VirtuaAthlete.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Sports / Track and Field",
+      "tate": false,
+      "description": "Sega's track and field arcade game for the Naomi featuring Olympic-style athletic events. Players mash buttons and time inputs to compete in sprint races, hurdles, and other field events. A spiritual successor to the classic Track & Field button-masher genre."
   },
   {
       "name":  "VirtuaGolf",
       "pictureName":  "virgolf.png",
       "fileName":  "VirtuaGolf.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Sports / Golf",
+      "tate": false,
+      "description": "Sega's Virtua Golf (also known as Dynamic Golf), a realistic 3D golf simulation for the Naomi. Features real-world-inspired courses and detailed swing mechanics, offering one of the more authentic golf experiences available in arcades at the time."
   },
   {
       "name":  "VirtuaNBA",
       "pictureName":  "virnba.png",
       "fileName":  "VirtuaNBA.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Sports / Basketball",
+      "tate": false,
+      "description": "Sega's NBA-licensed arcade basketball game for the Naomi. Features real NBA teams and players with fast-paced arcade basketball action. Emphasizes spectacular dunks and plays over simulation, in the tradition of NBA Jam-style arcade hoops."
   },
   {
       "name":  "VirtuaStriker2Ver.2000",
       "pictureName":  "vs2_2k.png",
       "fileName":  "VirtuaStriker2-2000.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Sports / Soccer",
+      "tate": false,
+      "description": "The 2000 edition update to Sega's Virtua Striker 2, a fast-paced 3D arcade soccer game. Features updated team rosters and refined gameplay from the original. A staple of Sega arcade sports gaming with accessible controls and exciting match pacing."
   },
   {
       "name":  "VirtuaTennis",
       "pictureName":  "vtennisg.png",
       "fileName":  "VirtuaTennis.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Sports / Tennis",
+      "tate": false,
+      "description": "Sega's acclaimed Virtua Tennis, one of the best arcade tennis games ever made. Features simplified but deeply satisfying tennis mechanics with a small roster of real-world players. The World Tour mode was later expanded for home releases and became the standard for arcade tennis."
   },
   {
       "name":  "VirtuaTennis2",
       "pictureName":  "vtennis2.png",
       "fileName":  "VirtuaTennis2.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Sports / Tennis",
+      "tate": false,
+      "description": "The sequel to Virtua Tennis, expanding the roster of real-world players and adding new courts and mini-games. Refines the already excellent gameplay of the original with improved animations and more depth in the World Tour progression system."
   },
   {
       "name":  "WaveRunnerGP",
       "pictureName":  "wrgp.jpg",
       "fileName":  "WaveRunnerGP.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Racing / Watercraft",
+      "tate": false,
+      "description": "Sega's personal watercraft racing game where players race jet skis across ocean courses. Features wavy water physics, multiple racers, and the distinctive sit-down wave runner cabinet. A fun, splashy racing experience in the tradition of Sega's motion-cabinet racers."
   },
   {
       "name":  "WorldSeriesBaseball",
       "pictureName":  "wsbbgd.png",
       "fileName":  "WorldSeriesBaseball.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Sports / Baseball",
+      "tate": false,
+      "description": "Sega's MLB-licensed arcade baseball game for the Naomi. Combines accessible arcade-style batting and pitching with realistic team rosters, making it one of the few legitimate baseball experiences available in arcades."
   },
   {
       "name":  "WWFRoyalRumble",
       "pictureName":  "wwfrr.jpg",
       "fileName":  "WWF_Royal_Rumble.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Wrestling",
+      "tate": false,
+      "description": "An arcade wrestling game from Sega featuring the WWF (now WWE) license and its roster of early 2000s superstars. Designed for fast, accessible multi-player wrestling fun with the signature Royal Rumble over-the-top-rope elimination format as a key mode."
   },
   {
       "name":  "ZeroGunner2",
       "pictureName":  "zerogunner2.jpg",
       "fileName":  "ZeroGunner2.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Shoot 'em Up",
+      "tate": false,
+      "description": "A vertical helicopter shoot 'em up by Psikyo where players can rotate their helicopter to aim in any direction. Players choose from three different helicopters with unique firing arcs and must blast through military targets. The rotation mechanic adds a layer of strategy not found in typical scrolling shooters."
   },
   {
       "name":  "ZombieRevenge",
       "pictureName":  "zombrvn.png",
       "fileName":  "ZombieRevenge.bin",
-      "boardType":  "naomi1"
+      "boardType":  "naomi1",
+      "genre": "Beat 'em Up",
+      "tate": false,
+      "description": "A Sega beat 'em up set in the House of the Dead universe. Three agents battle through hordes of zombies and mutants across multiple stages. Features co-op play, a variety of weapons to pick up, and the same B-movie horror atmosphere as its light gun counterparts."
   },
   {
       "name":  "SamuraiShodown6",
       "pictureName":  "samurai-shodown-6.jpg",
       "fileName":  "SamuraiShowdownVI.bin",
-      "boardType":  "atomswave"
+      "boardType":  "atomswave",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "The sixth main entry in SNK's weapon-based fighting series, released on the Atomiswave platform. Features the largest roster in the series, drawing characters from throughout Samurai Shodown history, plus a unique Spirit System that lets players choose fighting styles from previous entries."
   },
   {
       "name":  "TheRumbleFish",
       "pictureName":  "rumblefish.jpg",
       "fileName":  "TheRumbleFish.bin",
-      "boardType":  "atomswave"
+      "boardType":  "atomswave",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "A 2D fighting game by Dimps released on the Atomiswave hardware. Features a cast of original characters with fluid animations and a unique system called the 'Arms Change' mechanic that allows limited special move input for accessibility. Known for its polished visuals and interesting game design."
   },
   {
       "name":  "DemolishFist",
       "pictureName":  "dfist.jpg",
       "fileName":  "demolishfist.bin",
-      "boardType":  "atomswave"
+      "boardType":  "atomswave",
+      "genre": "Fighting / Beat 'em Up",
+      "tate": false,
+      "description": "A 3D fighting/brawler game for the Atomiswave hardware featuring futuristic street fighters. Players engage in close-quarters combat with a variety of power moves in arenas with destructible elements."
   },
   {
       "name":  "FasterthanSpeed",
       "pictureName":  "ftspeed.jpg",
       "fileName":  "ftspeed.bin",
-      "boardType":  "atomswave"
+      "boardType":  "atomswave",
+      "genre": "Racing",
+      "tate": false,
+      "description": "A high-speed racing game for the Atomiswave platform featuring futuristic vehicles competing on fast, twisting tracks. Emphasizes raw speed and boost mechanics in a sleek arcade racing package."
   },
   {
       "name":  "GuiltyGearX15",
       "pictureName":  "ggx15.jpg",
       "fileName":  "ggx15.bin",
-      "boardType":  "atomswave"
+      "boardType":  "atomswave",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "Guilty Gear X ver 1.5, a revised version of the original Guilty Gear X for the Atomiswave hardware. Features balance tweaks and updates to the roster and mechanics of Arc System Works' acclaimed anime fighter."
   },
   {
       "name":  "KnightsofValour",
       "pictureName":  "kovss.jpg",
       "fileName":  "kov7spirits.bin",
-      "boardType":  "atomswave"
+      "boardType":  "atomswave",
+      "genre": "Beat 'em Up",
+      "tate": false,
+      "description": "IGS's Knights of Valor on the Atomiswave platform, a side-scrolling beat 'em up set in the Three Kingdoms period of ancient China. Players choose from warriors based on the Romance of the Three Kingdoms novel and hack their way through armies of enemies."
   },
   {
       "name":  "MetalSlug6",
       "pictureName":  "ms6_a.jpg",
       "fileName":  "mslug6.bin",
-      "boardType":  "atomswave"
+      "boardType":  "atomswave",
+      "genre": "Run and Gun",
+      "tate": false,
+      "description": "The sixth main entry in SNK's beloved Metal Slug run-and-gun series, released on the Atomiswave platform. Introduces new playable characters Ralf and Clark from the King of Fighters series, adds alien enemies, and maintains the series' signature hand-drawn animation quality and intense co-op action."
   },
   {
       "name":  "TheKingofFightersNeowave",
       "pictureName":  "kofneowave.jpg",
       "fileName":  "KingOfFightersNeowave.bin",
-      "boardType":  "atomswave"
+      "boardType":  "atomswave",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "A King of Fighters game developed by SNK Playmore for the Atomiswave hardware. Features a roster drawn from KOF 2002 and introduces a new guard break system and MAX2 super move mechanic. Notable for being one of the few KOF entries released on non-SNK arcade hardware."
   },
   {
       "name":  "GuiltyGearAsuka",
       "pictureName":  "guiltygearisuka.jpg",
       "fileName":  "GuiltyGearIsuka.bin",
-      "boardType":  "naomi2"
+      "boardType":  "naomi2",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "Guilty Gear Isuka, an unusual entry in the Guilty Gear series featuring four-player simultaneous battle on a single screen. Players can fight in any direction including against each other or co-operatively against enemies in the Beat Tribe Cup mode. A unique departure from standard 1-vs-1 GG gameplay."
   },
   {
       "name":  "HokutonoKenFOTNS",
       "pictureName":  "fistofthenorthstar.jpg",
       "fileName":  "FOTNS_Naomi2_Fixed.bin",
-      "boardType":  "naomi2"
+      "boardType":  "naomi2",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "The Naomi 2 version of Fist of the North Star by Sega AM2, based on the classic Hokuto no Ken manga/anime. Features iconic characters using pressure-point martial arts in a 3D fighter. Showcases the Naomi 2's enhanced graphical capabilities with detailed character models."
   },
   {
       "name":  "BeachSpikers",
       "pictureName":  "BeachSpikers.png",
       "fileName":  "",
-      "boardType":  "naomi2"
+      "boardType":  "naomi2",
+      "genre": "Sports / Volleyball",
+      "tate": false,
+      "description": "Sega's beach volleyball game for the Naomi 2, featuring two-on-two beach volleyball matches with an international cast of female players. Known for its impressive visuals for the era, fluid animations, and solid volleyball mechanics including serves, spikes, and digs."
   },
   {
       "name":  "ClubKartEuropeanSession",
       "pictureName":  "clubkarteurope.gif",
       "fileName":  "ClubKartEuropeanSessionUnlocked.bin",
-      "boardType":  "naomi2"
+      "boardType":  "naomi2",
+      "genre": "Racing / Kart",
+      "tate": false,
+      "description": "Sega's kart racing arcade game for the Naomi 2, featuring go-kart racing across European-themed tracks. Uses the Naomi 2's enhanced 3D capabilities to deliver smooth kart racing action with a focus on drift mechanics and competitive lap times."
   },
   {
       "name":  "InitialD3Export",
       "pictureName":  "idasv3logo.gif",
       "fileName":  "Initial_D3_Export.bin",
-      "boardType":  "naomi2"
+      "boardType":  "naomi2",
+      "genre": "Racing",
+      "tate": false,
+      "description": "The export/international version of Initial D Arcade Stage 3, Sega's iconic street racing game based on the manga/anime series. Players drift through mountain touge courses in Japanese sports cars, battling rival drivers. The card system tracks progress and allows car upgrades."
   },
   {
       "name":  "InitialD2Export",
       "pictureName":  "Initial2.png",
       "fileName":  "InitialD2exp.bin",
-      "boardType":  "naomi2"
+      "boardType":  "naomi2",
+      "genre": "Racing",
+      "tate": false,
+      "description": "The export version of Initial D Arcade Stage 2, the sequel to Sega's beloved touge racing arcade game. Adds new cars, courses, and rival encounters based on the continuing manga storyline. The magnetic card system lets players save progress and tune their vehicles."
   },
   {
       "name":  "InitialDExport",
       "pictureName":  "Initial2.png",
       "fileName":  "InitialDexp.bin",
-      "boardType":  "naomi2"
+      "boardType":  "naomi2",
+      "genre": "Racing",
+      "tate": false,
+      "description": "The original Initial D Arcade Stage in its export version, Sega's groundbreaking touge street racing game. Players choose iconic Japanese sports cars and race through mountain passes with a heavy emphasis on mastering drift technique. Launched one of arcade gaming's most beloved racing series."
   },
   {
       "name":  "InitialD2Japanese",
       "pictureName":  "initald-japamn.jpg",
       "fileName":  "InitialD2jap.bin",
-      "boardType":  "naomi2"
+      "boardType":  "naomi2",
+      "genre": "Racing",
+      "tate": false,
+      "description": "The original Japanese version of Initial D Arcade Stage 2. Functionally similar to the export version but with Japanese text and potentially region-specific content. Features the same touge drifting gameplay across Japan-based mountain passes."
   },
   {
       "name":  "InitialDJapanese",
       "pictureName":  "InitialDJapan.jpg",
       "fileName":  "InitialDjap.bin",
-      "boardType":  "naomi2"
+      "boardType":  "naomi2",
+      "genre": "Racing",
+      "tate": false,
+      "description": "The original Japanese release of Initial D Arcade Stage, the game that launched Sega's legendary touge racing series. Full Japanese text version with the original anime music and voice acting intact, driving mountain passes in tuned Japanese sports cars."
   },
   {
       "name":  "KingOfRoute66",
       "pictureName":  "kor66.jpg",
       "fileName":  "KingOfRoute66.bin",
-      "boardType":  "naomi2"
+      "boardType":  "naomi2",
+      "genre": "Racing / Truck",
+      "tate": false,
+      "description": "Sega's big rig racing game for the Naomi 2, putting players behind the wheel of a massive semi-truck racing down the iconic American Route 66. Features stunning visuals for the era, rival truck battles, and a powerful sense of scale as you thunder down the highway."
   },
   {
       "name":  "VirtuaFighter4EvoverB",
       "pictureName":  "vf4evo.jpg",
       "fileName":  "VirtuaFighter4Evo_verb.bin",
-      "boardType":  "naomi2"
+      "boardType":  "naomi2",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "Virtua Fighter 4: Evolution Version B, an update to Sega AM2's celebrated 3D fighting game. Adds new characters Goh and Brad to the roster and significantly rebalances the existing cast. Widely praised as one of the deepest and most technically refined 3D fighters ever made."
   },
   {
       "name":  "VirtuaFighter4FinalTunedverB",
       "pictureName":  "vf4tuned.jpg",
       "fileName":  "VirtuaFighter4FinalTuned_verb.bin",
-      "boardType":  "naomi2"
+      "boardType":  "naomi2",
+      "genre": "Fighting",
+      "tate": false,
+      "description": "The final and most polished version of Virtua Fighter 4, representing the pinnacle of the VF4 competitive experience. Final Tuned Ver.B features extensive balance refinements and was the definitive competitive tournament standard for VF4 in Japanese arcades."
   },
   {
       "name":  "VirtuaStriker3",
       "pictureName":  "virtuastriker3.jpg",
       "fileName":  "VirtuaStriker3.bin",
-      "boardType":  "naomi2"
+      "boardType":  "naomi2",
+      "genre": "Sports / Soccer",
+      "tate": false,
+      "description": "The third entry in Sega's Virtua Striker arcade soccer series, powered by the Naomi 2 hardware. Features updated team rosters, improved visuals, and refined passing and shooting mechanics. A polished and fast-paced arcade soccer experience."
   },
   {
       "name":  "F-Zero AX",
       "pictureName":  "fzeroax.png",
       "fileName":  "FZeroAx.bin",
-      "boardType":  "triforce"
+      "boardType":  "triforce",
+      "genre": "Racing",
+      "tate": false,
+      "description": "The arcade counterpart to F-Zero GX on GameCube, developed jointly by Sega and Nintendo on the Triforce hardware. Features blazing-fast anti-gravity racing with the full F-Zero roster at blistering speeds across exclusive arcade courses. Linked with GX to unlock exclusive content."
   },
   {
       "name":  "Mario Kart GP",
       "pictureName":  "Mario_Kart_Arcade_GP.png",
       "fileName":  "MarioKartGP.bin",
-      "boardType":  "triforce"
+      "boardType":  "triforce",
+      "genre": "Racing / Kart",
+      "tate": false,
+      "description": "Nintendo and Namco's Mario Kart arcade spinoff on the Triforce hardware. Features the classic Mario Kart cast with Namco guest characters like Pac-Man and Ms. Pac-Man. Includes unique item cards and arcade-exclusive courses not found in the home series."
   },
   {
       "name":  "Mario Kart GP 2",
       "pictureName":  "mkagp2.jpg",
       "fileName":  "MarioKartGP2.bin",
-      "boardType":  "triforce"
+      "boardType":  "triforce",
+      "genre": "Racing / Kart",
+      "tate": false,
+      "description": "The sequel to Mario Kart Arcade GP, featuring new courses, items, and characters including additional Namco representatives. Expands on the original with more content and refined gameplay, continuing the unique arcade-only Mario Kart experience."
   },
   {
       "name":  "Virtua Striker 2002",
       "pictureName":  "Virtua_Striker.jpg",
       "fileName":  "vs2002e.bin",
-      "boardType":  "triforce"
+      "boardType":  "triforce",
+      "genre": "Sports / Soccer",
+      "tate": false,
+      "description": "The 2002 World Cup edition of Sega's Virtua Striker series on the Triforce hardware. Features updated national team rosters timed to the FIFA World Cup, with refined gameplay and improved visuals over its Naomi predecessors."
   },
   {
       "name":  "Virtua Striker 4 2006",
       "pictureName":  "vs4.jpg",
       "fileName":  "vs406.bin",
-      "boardType":  "triforce"
+      "boardType":  "triforce",
+      "genre": "Sports / Soccer",
+      "tate": false,
+      "description": "Sega's fourth main entry in the Virtua Striker series, released on Triforce hardware for the 2006 World Cup. Features updated rosters, improved 3D visuals, and refined arcade soccer gameplay that the series is known for."
   },
   {
       "name":  "Virtua Striker 4 2006 Export",
       "pictureName":  "vs4.jpg",
       "fileName":  "Virtua_Striker_4_2006_Exp.bin",
-      "boardType":  "triforce"
+      "boardType":  "triforce",
+      "genre": "Sports / Soccer",
+      "tate": false,
+      "description": "The international export version of Virtua Striker 4 Ver.2006, featuring localized text and potentially adjusted team rosters for international markets. Same core fast-paced 3D arcade soccer gameplay as the Japanese release."
   },
   {
-      "name":  "Crazy Taxi High Roller ",
+      "name":  "Crazy Taxi High Roller",
       "pictureName":  "crtaxihr.png",
       "fileName":  "CrazyTaxiHighRoller",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Racing / Action",
+      "tate": false,
+      "description": "An enhanced arcade version of Crazy Taxi for the Chihiro hardware (Xbox-based). Features improved visuals over the Naomi original and additional content. Players race taxis through a bustling city picking up and delivering fares as fast as possible for the highest tips."
   },
   {
       "name":  "Ghost Squad (version pour dimm de 512MB et d\u00271GB)",
       "pictureName":  "gs.jpg",
       "fileName":  "gdx0012a_-_Ghost_Squad.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Light Gun Shooter",
+      "tate": false,
+      "description": "Sega's tactical light gun shooter for the Chihiro platform. Players are members of an elite anti-terrorist squad called Ghost Squad, clearing missions by shooting enemies while protecting hostages. Features multiple branching mission paths and a weapon upgrade system across its three main operations."
   },
   {
       "name":  "Ghost Squad - alternative dump",
       "pictureName":  "gs.jpg",
       "fileName":  "Ghost_Squad_Ver._A_512.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Light Gun Shooter",
+      "tate": false,
+      "description": "An alternative ROM dump of Ghost Squad Ver.A for the Chihiro hardware, sized for a 512MB DIMM configuration. Same tactical light gun shooter gameplay as the primary dump — elite squad missions, hostage rescues, and branching operation paths."
   },
   {
       "name":  "Ghost Squad - alternative dump",
       "pictureName":  "gs.jpg",
       "fileName":  "Ghost_Squad_Ver._A_1GB.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Light Gun Shooter",
+      "tate": false,
+      "description": "An alternative ROM dump of Ghost Squad Ver.A for the Chihiro hardware, sized for a 1GB DIMM configuration. Same tactical light gun shooter gameplay — counter-terrorism missions with branching paths and unlockable weapons."
   },
   {
       "name":  "Gundam Battle Operating Simulator",
       "pictureName":  "gundam.jpg",
       "fileName":  "Gundam_Battle_Operating_Simulator.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Simulation / Action",
+      "tate": false,
+      "description": "A large-scale Gundam arcade simulation game for the Chihiro platform. Players pilot Universal Century mobile suits in battle scenarios, commanding units in a combat simulator format. Designed for the full arcade cabinet experience with joystick and throttle controls."
   },
   {
       "name":  "Ollie King",
       "pictureName":  "ollie_king.jpg",
       "fileName":  "Ollie_King_512.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Skateboarding / Music",
+      "tate": false,
+      "description": "A unique cel-shaded skateboarding game for the Chihiro hardware with a heavy emphasis on music and rhythm. Players perform tricks to the beat of the soundtrack in colorful environments. Produced by Sega's Smilebit studio with a distinctive visual style."
   },
   {
       "name":  "Ollie King",
       "pictureName":  "ollie_king.jpg",
       "fileName":  "Ollie_King_1GB.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Skateboarding / Music",
+      "tate": false,
+      "description": "The 1GB DIMM version of Ollie King, Sega Smilebit's rhythm-infused cel-shaded skateboarding game. Players grind and trick to the music across vibrant stages. Same gameplay as the 512MB version, optimized for a larger DIMM configuration."
   },
   {
       "name":  "Out Run 2",
       "pictureName":  "Outrun2.jpg",
       "fileName":  "OR2_512.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Racing",
+      "tate": false,
+      "description": "Sega's stunning revival of the OutRun franchise on the Chihiro hardware (512MB version). Players cruise in a Ferrari along gorgeous, branching scenic routes to the rhythm of the iconic 'Passing Breeze' style soundtrack. Recaptured the magic of the 1986 original with beautiful new visuals."
   },
   {
       "name":  "Out Run 2",
       "pictureName":  "Outrun2.jpg",
       "fileName":  "OR2_1gb.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Racing",
+      "tate": false,
+      "description": "Sega's Out Run 2 on Chihiro hardware (1GB version). Features the same vibrant coastal driving experience as the 512MB version — Ferraris, scenic routes, and Sega's legendary arcade racing feel — optimized for a larger DIMM configuration."
   },
   {
       "name":  "Out Run 2 BETA",
       "pictureName":  "Outrun2.jpg",
       "fileName":  "OR2BETA.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Racing",
+      "tate": false,
+      "description": "A beta/prototype build of Out Run 2 for the Chihiro hardware. Contains pre-release content and may differ from the final release in terms of courses, features, or balance. Of interest to collectors and fans of the series for its historical development value."
   },
   {
       "name":  "Out Run 2 SP (version pour dimm d\u00271Gb)",
       "pictureName":  "outrun2sp.jpg",
       "fileName":  "or2sp_1gb.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Racing",
+      "tate": false,
+      "description": "Out Run 2 SP (Special Tours), the expanded follow-up to Out Run 2 with new courses, cars, and the Heart Attack mode where players must perform driving feats for a female passenger. The 1GB DIMM version of this much-loved arcade racer."
   },
   {
       "name":  "Outrun 2 Special Tours",
       "pictureName":  "outrun2sp.jpg",
       "fileName":  "Outrun_2_Special_Tours_512.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Racing",
+      "tate": false,
+      "description": "Out Run 2 Special Tours (512MB version), featuring additional stages and the Heart Attack challenge mode. Players drive Ferraris through scenic worldwide routes while keeping their passenger happy through skilled or dramatic driving."
   },
   {
       "name":  "Outrun 2 Special Tours",
       "pictureName":  "outrun2sp.jpg",
       "fileName":  "Outrun_2_Special_Tours_1GB.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Racing",
+      "tate": false,
+      "description": "Out Run 2 Special Tours (1GB version), the expanded edition of Out Run 2 with worldwide scenic routes and the Heart Attack passenger challenge mode. Same content as the 512MB version in a larger DIMM configuration."
   },
   {
       "name":  "Sega Golf Club Version 2006 Next Tours Rev.A",
       "pictureName":  "sega_golf.jpg",
       "fileName":  "Sega_Golf_Club_Version_2006_Next_Tours_Rev.A_512.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Sports / Golf",
+      "tate": false,
+      "description": "Sega's 2006 golf simulation for the Chihiro platform (512MB, Rev.A). Features realistic golf mechanics across multiple real-world inspired courses with detailed character animations and club selection strategy."
   },
   {
       "name":  "Sega Golf Club Version 2006 Next Tours Rev.A",
       "pictureName":  "sega_golf.jpg",
       "fileName":  "Sega_Golf_Club_Version_2006_Next_Tours_Rev.A_1GB.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Sports / Golf",
+      "tate": false,
+      "description": "Sega's 2006 golf simulation for the Chihiro platform (1GB, Rev.A). Same realistic golf experience with multiple courses as the 512MB version, in a larger DIMM configuration."
   },
   {
       "name":  "The House Of The Dead 3",
       "pictureName":  "hotd3.png",
       "fileName":  "The_House_Of_The_Dead_3_GDX-0001.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Light Gun Shooter",
+      "tate": false,
+      "description": "Sega's third entry in the iconic zombie light gun shooter series, set in a post-apocalyptic world overrun by undead. Players blast through hordes of grotesque creatures using shotgun controllers. Features branching paths, powerful boss zombies, and two-player co-op in a bleak, atmospheric setting."
   },
   {
       "name":  "Virtua Cop 3",
       "pictureName":  "vc3.jpg",
       "fileName":  "Virtua_Cop_3_512.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Light Gun Shooter",
+      "tate": false,
+      "description": "The third entry in Sega's Virtua Cop series on the Chihiro hardware (512MB). Players reprise their roles as elite police officers taking down criminal organizations in on-rails shooting stages. Introduces new mechanics and enhanced visuals over previous entries in the series."
   },
   {
       "name":  "Virtua Cop 3",
       "pictureName":  "vc3.jpg",
       "fileName":  "Virtua_Cop_3_1GB.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Light Gun Shooter",
+      "tate": false,
+      "description": "Virtua Cop 3 on the Chihiro hardware in the 1GB DIMM configuration. Same on-rails police action shooter as the 512MB version — busting criminals through branching mission stages with two-player co-op support."
   },
   {
       "name":  "Wangan Midnight - Maximum Tune (EXP)",
       "pictureName":  "wm.jpg",
       "fileName":  "Wangan_Midnight_Maximum_Tune_EXPORT_(GDX-0009B).bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Racing",
+      "tate": false,
+      "description": "The export version of Wangan Midnight Maximum Tune, Namco's iconic highway racing game based on the Wangan Midnight manga/anime. Players race tuned Japanese sports cars at extreme speeds on the Bayshore Route, using a card system to save and upgrade their vehicles."
   },
   {
       "name":  "Wangan Midnight - Maximum Tune (EXP) - alternative dump",
       "pictureName":  "wm.jpg",
       "fileName":  "Wangan_Midnight_Maximum_Tune_EXP_512.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Racing",
+      "tate": false,
+      "description": "An alternative dump of Wangan Midnight Maximum Tune Export in the 512MB DIMM format. Same high-speed highway racing game with car upgrade card system as the primary export dump."
   },
   {
       "name":  "Wangan Midnight - Maximum Tune (EXP) - alternative dump",
       "pictureName":  "wm.jpg",
       "fileName":  "Wangan_Midnight_Maximum_Tune_EXP_1GB.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Racing",
+      "tate": false,
+      "description": "An alternative dump of Wangan Midnight Maximum Tune Export in the 1GB DIMM format. Same high-speed Tokyo highway racing with card-based progression as the other dumps."
   },
   {
       "name":  "Wangan Midnight - Maximum Tune 2 (JAP)",
       "pictureName":  "wg2.jpg",
       "fileName":  "Wangan_Midnight_Maximum_Tune_2_JAP_(GDX-0015).bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Racing",
+      "tate": false,
+      "description": "The original Japanese version of Wangan Midnight Maximum Tune 2, the sequel to Namco's beloved highway racer. Adds new cars, routes, and story content based on the continuing manga. Japanese text version with the GDX-0015 ROM identifier."
   },
   {
       "name":  "Wangan Midnight - Maximum Tune 2 (EXP)",
       "pictureName":  "wg2.jpg",
       "fileName":  "Wangan_Midnight_Maximum_Tune_2_JAP_512.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Racing",
+      "tate": false,
+      "description": "Wangan Midnight Maximum Tune 2 in the 512MB DIMM format. Expands on the original with more cars, faster rivals, and additional story chapters. The card system lets players build up a legendary street racing machine over multiple sessions."
   },
   {
       "name":  "Wangan Midnight - Maximum Tune 2 (EXP)",
       "pictureName":  "wg2.jpg",
       "fileName":  "Wangan_Midnight_Maximum_Tune_2_JAP_1GB.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Racing",
+      "tate": false,
+      "description": "Wangan Midnight Maximum Tune 2 in the 1GB DIMM format. Same expanded highway racing sequel content as the 512MB version, optimized for larger DIMM capacity."
   },
   {
       "name":  "Wangan Midnight - Maximum Tune 2 rev.B (EXP)",
       "pictureName":  "wg2.jpg",
       "fileName":  "Wangan_Midnight_Maximum_Tune_2B_EXP_512.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Racing",
+      "tate": false,
+      "description": "Revision B of Wangan Midnight Maximum Tune 2 Export in the 512MB format. This update refines the balance and performance of cars and rivals in Namco's highway racing game."
   },
   {
       "name":  "Wangan Midnight - Maximum Tune 2 rev.B (EXP)",
       "pictureName":  "wg2.jpg",
       "fileName":  "Wangan_Midnight_Maximum_Tune_2B_EXP_1GB.bin",
-      "boardType":  "chihiro"
+      "boardType":  "chihiro",
+      "genre": "Racing",
+      "tate": false,
+      "description": "Revision B of Wangan Midnight Maximum Tune 2 Export in the 1GB format. The same refined highway racing balance update as the 512MB Rev.B, in a larger DIMM configuration."
   }
 ]

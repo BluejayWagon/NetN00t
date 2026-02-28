@@ -19,6 +19,10 @@ type RomDetails struct {
 	PictureName string `json:"pictureName"`
 	FileName    string `json:"fileName"`
 	BoardType   string `json:"boardType"`
+	// additional metadata
+	Genre       string `json:"genre,omitempty"`
+	Tate        bool   `json:"tate,omitempty"`
+	Description string `json:"description,omitempty"`
 }
 
 type FullRomDetails struct {
@@ -27,12 +31,31 @@ type FullRomDetails struct {
 	FileName    string
 	BoardType   string
 	FullPath    string
+	Genre       string
+	Tate        bool
+	Description string
 }
 
+// RomSummary contains only the minimal information displayed in the rom list.
+// It is returned by the lightweight list API to reduce payload size.
+// The frontend is responsible for requesting full details when a summary
+// entry is selected.
+type RomSummary struct {
+	Name     string `json:"name"`
+	FileName string `json:"fileName"` // used to request further details or perform uploads
+	ImageUrl string `json:"imageUrl"`
+}
+
+// FrontendResponse is the original structure; it is still used by the old
+// list endpoint for compatibility or during migration, but the new
+// summary-oriented API will prefer RomSummary.
 type FrontendResponse struct {
-	Name      string `json:"name"`
-	ImageUrl  string `json:"imageUrl"`
-	BoardType string `json:"boardType"`
+	Name        string `json:"name"`
+	ImageUrl    string `json:"imageUrl"`
+	BoardType   string `json:"boardType"`
+	Genre       string `json:"genre,omitempty"`
+	Tate        bool   `json:"tate,omitempty"`
+	Description string `json:"description,omitempty"`
 }
 
 type FileDetails struct {
@@ -57,7 +80,6 @@ func LoadConfig(filePath string) (*Config, error) {
 	return &config, nil
 }
 
-// TODO: I think we can remove this function now
 func LoadRomDetails(filePath string) ([]RomDetails, error) {
 	file, err := os.Open(filePath)
 	if err != nil {
@@ -119,6 +141,9 @@ func TransformFilesToRomDetails(filelist []FileDetails, romDetails []RomDetails)
 					FileName:    rom.FileName,
 					BoardType:   rom.BoardType,
 					FullPath:    file.FullPath,
+					Genre:       rom.Genre,
+					Tate:        rom.Tate,
+					Description: rom.Description,
 				})
 			}
 		}
@@ -126,18 +151,47 @@ func TransformFilesToRomDetails(filelist []FileDetails, romDetails []RomDetails)
 	return transformed
 }
 
+// TransformFilesToSummaries produces a list of RomSummary objects.  Only the
+// minimum fields necessary for the initial listing are populated.  This is
+// useful when the client only needs the picture and name and will request
+// further details later.
+func TransformFilesToSummaries(filelist []FileDetails) ([]RomSummary, error) {
+	romDetails, err := LoadRomDetailsFromEmbedded()
+	if err != nil {
+		return nil, err
+	}
+	transformedFiles := TransformFilesToRomDetails(filelist, romDetails)
+	summaries := make([]RomSummary, 0, len(transformedFiles))
+	for _, rom := range transformedFiles {
+		summaries = append(summaries, RomSummary{
+			Name:     rom.Name,
+			FileName: rom.FileName,
+			ImageUrl: "/images/" + strings.TrimSpace(rom.PictureName),
+		})
+	}
+	return summaries, nil
+}
+
+// TransformFilesToFrontendResponse converts all of the information from the
+// embedded rom configuration plus the discovered file list into the full
+// frontend response objects.  This returns all metadata and is therefore
+// heavier; it is still available for existing callers.
 func TransformFilesToFrontendResponse(filelist []FileDetails) ([]FrontendResponse, error) {
 	romDetails, err := LoadRomDetailsFromEmbedded()
 	if err != nil {
 		return nil, err
 	}
 	transformedFiles := TransformFilesToRomDetails(filelist, romDetails)
-	var transformedResponses []FrontendResponse
+	// always initialize a non-nil slice so JSON encoder emits [] instead of null
+	transformedResponses := make([]FrontendResponse, 0, len(transformedFiles))
 	for _, rom := range transformedFiles {
 		transformedResponses = append(transformedResponses, FrontendResponse{
-			Name:      rom.Name,
-			ImageUrl:  "/images/" + strings.TrimSpace(rom.PictureName),
-			BoardType: rom.BoardType,
+			Name:        rom.Name,
+			ImageUrl:    "/images/" + strings.TrimSpace(rom.PictureName),
+			BoardType:   rom.BoardType,
+			Genre:       rom.Genre,
+			Tate:        rom.Tate,
+			Description: rom.Description,
 		})
 	}
 	return transformedResponses, nil
