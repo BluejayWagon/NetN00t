@@ -79,6 +79,14 @@ func main() {
 	}
 	fmt.Println("ROM cache initialized successfully")
 
+	// Initialize profiles store (persists profiles under ./arcade_profiles)
+	fmt.Println("Initializing profiles store...")
+	if err := web.InitializeProfilesStore("arcade_profiles"); err != nil {
+		fmt.Println("Error initializing profiles store:", err)
+		return
+	}
+	fmt.Println("Profiles store initialized")
+
 	// Handle API requests
 	http.HandleFunc("/api/upload", func(w http.ResponseWriter, r *http.Request) {
 		web.UploadHandler(w, r, configuration.RomDirectory)
@@ -87,6 +95,12 @@ func main() {
 	http.HandleFunc("/api/listfiles", web.ListFilesHandler(configuration.RomDirectory))
 	// detailed metadata for a single rom; query param: fileName
 	http.HandleFunc("/api/rom", web.RomDetailsHandler(configuration.RomDirectory))
+
+	// Profiles API
+	http.HandleFunc("/api/profiles", web.ProfilesHandler())
+	http.HandleFunc("/api/profiles/", web.ProfileHandler())
+	http.HandleFunc("/api/profiles/selected", web.ProfilesSelectedHandler())
+	http.HandleFunc("/api/boardconfig", web.BoardConfigHandler())
 	fmt.Println(configuration)
 
 	http.ListenAndServe(":8080", nil)
