@@ -1,0 +1,67 @@
+{
+  "boardTypes": [
+    "Naomi 1",
+    "Naomi 2",
+    "Triforce",
+    "Chihiro"
+  ],
+  "boardInfo": {
+    "Naomi 1": {
+      "releaseYear": 1998,
+      "architecture": "Dreamcast-based",
+      "cpu": "Hitachi SH-4",
+      "notable_games": ["Crazy Taxi", "House of the Dead 2", "Dead or Alive 2"]
+    },
+    "Naomi 2": {
+      "releaseYear": 2000,
+      "architecture": "Enhanced Naomi with PowerVR T&L",
+      "cpu": "Hitachi SH-4",
+      "notable_games": ["Virtua Fighter 4", "Initial D Arcade Stage", "World Club Champion Football"]
+    },
+    "Triforce": {
+      "releaseYear": 2003,
+      "architecture": "GameCube-based (co-developed with Nintendo/Namco)",
+      "cpu": "Broadway PowerPC",
+      "notable_games": ["Mario Kart Arcade GP", "F-Zero AX", "Virtua Fighter 4", "Virtua Striker 4"]
+    },
+    "Chihiro": {
+      "releaseYear": 2002,
+      "architecture": "Xbox-based",
+      "cpu": "Intel Pentium III",
+      "notable_games": ["House of the Dead 3", "OutRun 2", "Virtua Cop 3", "Ghost Squad"]
+    }
+  },
+  "controlSchemes": [
+    {
+      "name": "Racing",
+      "description": "Steering wheel, gas/brake pedals, shifter",
+      "games": ["OutRun 2", "Wangan Midnight Maximum Tune", "Ferrari F430 GT"]
+    },
+    {
+      "name": "1P Action",
+      "description": "Joystick + 3-6 buttons",
+      "games": ["Crazy Taxi", "Dead or Alive 2", "House of the Dead 3"]
+    },
+    {
+      "name": "2P Fighting",
+      "description": "Two joysticks + 4-6 buttons per player",
+      "games": ["Virtua Fighter 4", "Dead or Alive Xtreme", "Soul Calibur"]
+    },
+    {
+      "name": "Lightgun",
+      "description": "Lightgun + trigger button",
+      "games": ["House of the Dead 2/3", "Virtua Cop 3", "Zombie Revenge"]
+    },
+    {
+      "name": "Monkey Ball",
+      "description": "Rolling ball controller + buttons",
+      "games": ["Super Monkey Ball Arcade"]
+    }
+  ],
+  "defaultPictures": {
+    "Chihiro": "boards/default_chihiro.png",
+    "Naomi 1": "boards/default_naomi1.png",
+    "Naomi 2": "boards/default_naomi2.png",
+    "Triforce": "boards/default_triforce.png"
+  }
+}
