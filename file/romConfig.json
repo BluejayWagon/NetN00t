@@ -59,7 +59,7 @@
       "fileName":  "BorderDown_v3.bin",
       "boardType":  "naomi1",
       "genre": "Shoot 'em Up",
-      "tate": true,
+      "tate": false,
       "description": "A horizontal scrolling shoot 'em up by G.rev with a unique 'border' system where getting hit drops you to a lower difficulty border rather than killing you outright. Features three distinct routes (borders) through each stage with impressive visuals for the hardware."
   },
   {
@@ -230,7 +230,7 @@
       "fileName":  "GigaWing2.bin",
       "boardType":  "naomi1",
       "genre": "Shoot 'em Up",
-      "tate": true,
+      "tate": false,
       "description": "The sequel to Capcom's GigaWing, a vertical bullet-hell shooter featuring a reflect barrier mechanic that lets players absorb and reflect enemy fire. Set in a dieselpunk WWII-era world with four unique pilots and ships. Infamous for its screen-filling bullet patterns and massive score multipliers."
   },
   {
@@ -383,7 +383,7 @@
       "fileName":  "mamonorov6.bin",
       "boardType":  "naomi1",
       "genre": "Shoot 'em Up",
-      "tate": true,
+      "tate": false,
       "description": "A vertical bullet-hell shoot 'em up by G.rev with a colorful, comedic art style. Players control Mamoru-kun, a young superhero defending his town from waves of cute but dangerous enemies. Known for its vibrant visuals, energetic music, and accessible-yet-deep scoring system."
   },
   {
@@ -617,7 +617,7 @@
       "fileName":  "senkov3.bin",
       "boardType":  "naomi1",
       "genre": "Shoot 'em Up / Fighting",
-      "tate": true,
+      "tate": false,
       "description": "A unique vertical shooter/fighting hybrid by G.rev where players control 'Rounder' mechs that can both shoot enemies and engage in close-range combat with other Rounders. Features a distinctive mix of bullet-hell evasion and fighting game-style boss battles."
   },
   {
@@ -626,7 +626,7 @@
       "fileName":  "senkonewv6.bin",
       "boardType":  "naomi1",
       "genre": "Shoot 'em Up / Fighting",
-      "tate": true,
+      "tate": false,
       "description": "An updated version of Senko no Ronde with balance adjustments and new content. Refines the shooter/fighting hybrid gameplay of the original with tweaked Rounder abilities and new stages."
   },
   {
@@ -635,7 +635,7 @@
       "fileName":  "SenkoNoRondeSP_v3.bin",
       "boardType":  "naomi1",
       "genre": "Shoot 'em Up / Fighting",
-      "tate": true,
+      "tate": false,
       "description": "The Special edition of Senko no Ronde, featuring additional content and refinements to the shooter/fighting hybrid formula. Adds new Rounders and stages to the already creative mech combat system."
   },
   {
@@ -644,7 +644,7 @@
       "fileName":  "ShikigamiNoShiroII_v6.bin",
       "boardType":  "naomi1",
       "genre": "Shoot 'em Up",
-      "tate": true,
+      "tate": false,
       "description": "Castle of Shikigami II, a vertical bullet-hell shoot 'em up set in modern Tokyo with supernatural horror themes. Players choose from a cast of unique characters with distinct shot types and story branches. Features a tension meter that multiplies point values when flying close to enemy bullets."
   },
   {
@@ -770,7 +770,7 @@
       "fileName":  "UnderDefeat_v3.bin",
       "boardType":  "naomi1",
       "genre": "Shoot 'em Up",
-      "tate": true,
+      "tate": false,
       "description": "A vertical shoot 'em up by G.rev set in a WWII-era alternate world where players pilot a German helicopter gunship. Features a unique rotation mechanic where the helicopter can be angled left and right to change shot direction. Known for its gritty military aesthetic and tight gameplay."
   },
   {
@@ -869,7 +869,7 @@
       "fileName":  "ZeroGunner2.bin",
       "boardType":  "naomi1",
       "genre": "Shoot 'em Up",
-      "tate": false,
+      "tate": true,
       "description": "A vertical helicopter shoot 'em up by Psikyo where players can rotate their helicopter to aim in any direction. Players choose from three different helicopters with unique firing arcs and must blast through military targets. The rotation mechanic adds a layer of strategy not found in typical scrolling shooters."
   },
   {

@@ -11,13 +11,13 @@ import (
 )
 
 type Profile struct {
-	ID            string `json:"id"`
-	Name          string `json:"name"`
-	BoardType     string `json:"boardType"`
-	ControlScheme string `json:"controlScheme"`
-	IP            string `json:"ip"`
-	Notes         string `json:"notes,omitempty"`
-	Picture       string `json:"picture,omitempty"`
+	ID                 string `json:"id"`
+	Name               string `json:"name"`
+	BoardType          string `json:"boardType"`
+	MonitorOrientation string `json:"monitorOrientation"`
+	IP                 string `json:"ip"`
+	Notes              string `json:"notes,omitempty"`
+	Picture            string `json:"picture,omitempty"`
 }
 
 type profilesFile struct {
@@ -25,17 +25,16 @@ type profilesFile struct {
 	Profiles []Profile `json:"profiles"`
 }
 
-type ControlScheme struct {
-	Name        string   `json:"name"`
-	Description string   `json:"description"`
-	Games       []string `json:"games"`
+type MonitorfOrientation struct {
+	Name        string `json:"name"`
+	Description string `json:"description"`
 }
 
 type BoardConfig struct {
-	BoardTypes      []string         `json:"boardTypes"`
-	BoardInfo       map[string]interface{} `json:"boardInfo,omitempty"`
-	ControlSchemes  []ControlScheme  `json:"controlSchemes"`
-	DefaultPictures map[string]string `json:"defaultPictures,omitempty"`
+	BoardTypes          []string               `json:"boardTypes"`
+	BoardInfo           map[string]interface{} `json:"boardInfo,omitempty"`
+	MonitorOrientations []MonitorfOrientation  `json:"monitorOrientations"`
+	DefaultPictures     map[string]string      `json:"defaultPictures,omitempty"`
 }
 
 type Store struct {
