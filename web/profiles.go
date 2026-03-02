@@ -142,6 +142,14 @@ func ProfilesSelectedHandler() http.HandlerFunc {
 	}
 }
 
+// GetBoardConfigForFiltering returns the board config (used by ROM filtering).
+func GetBoardConfigForFiltering() arcade_profiles.BoardConfig {
+	if profilesStore == nil {
+		return arcade_profiles.BoardConfig{}
+	}
+	return profilesStore.GetBoardConfig()
+}
+
 // BoardConfigHandler returns the board configuration reference data.
 func BoardConfigHandler() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {

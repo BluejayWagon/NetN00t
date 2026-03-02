@@ -27,16 +27,15 @@ interface Profile {
   id: string;
   name: string;
   boardType: string;
-  controlScheme: string;
+  monitorOrientation: string;
   ip: string;
   notes?: string;
   picture?: string;
 }
 
-interface ControlScheme {
+interface MonitorOrientation {
   name: string;
   description: string;
-  games: string[];
 }
 
 interface BoardConfig {
@@ -47,12 +46,11 @@ interface BoardConfig {
     cpu: string;
     notable_games: string[];
   }>;
-  controlSchemes: ControlScheme[] | string[];
+  monitorOrientations: MonitorOrientation[];
   defaultPictures?: Record<string, string>;
 }
 
 function UploadRom() {
-  const [ip, setIp] = useState("");
   const [selectedFileName, setSelectedFileName] = useState("");
   const [summaries, setSummaries] = useState<RomSummary[]>([]);
   const [selectedDetail, setSelectedDetail] = useState<RomDetail | null>(null);
@@ -66,7 +64,7 @@ function UploadRom() {
   const [editingProfile, setEditingProfile] = useState<Profile | null>(null);
   const [newProfileName, setNewProfileName] = useState("");
   const [newProfileBoard, setNewProfileBoard] = useState("Naomi 1");
-  const [newProfileControl, setNewProfileControl] = useState("1P Action");
+  const [newProfileMonitorOrientation, setNewProfileMonitorOrientation] = useState("Horizontal/Yoko");
   const [newProfileIp, setNewProfileIp] = useState("");
   const [newProfileNotes, setNewProfileNotes] = useState("");
   const [deleteConfirmId, setDeleteConfirmId] = useState<string>("");
@@ -78,16 +76,20 @@ function UploadRom() {
     fetchBoardConfig();
   }, []);
 
-  // Update selected profile when selectedProfileId changes
+  // Update selected profile when selectedProfileId changes, and refetch files with filters
   useEffect(() => {
     if (selectedProfileId) {
       const profile = profiles.find(p => p.id === selectedProfileId);
       if (profile) {
         setSelectedProfile(profile);
-        setIp(profile.ip);
+        setNewProfileIp(profile.ip);
+        // Refetch files with the new profile's filter parameters
+        handleGetFilesFiltered(profile);
       }
     } else {
       setSelectedProfile(null);
+      // Fetch all files when no profile is selected
+      handleGetFiles();
     }
   }, [selectedProfileId, profiles]);
 
@@ -115,7 +117,7 @@ function UploadRom() {
   const handleUpload = async () => {
     try {
       const response = await axios.post("/api/upload", {
-        ip,
+        ip: selectedProfile?.ip || "",
         fileName: selectedFileName,
       });
       alert(response.data);
@@ -132,6 +134,31 @@ function UploadRom() {
     setHasFetched(true);
     try {
       const response = await axios.get("/api/listfiles");
+      const data = response.data;
+      if (Array.isArray(data)) {
+        setSummaries(data as RomSummary[]);
+      } else {
+        console.warn("Unexpected response for /api/listfiles:", data);
+        setSummaries([]);
+      }
+    } catch (error) {
+      setSummaries([]);
+      if (axios.isAxiosError(error)) {
+        alert("Error: " + (error.response?.data || error.message));
+      } else {
+        alert("An unexpected error occurred: " + String(error));
+      }
+    }
+  };
+
+  const handleGetFilesFiltered = async (profile: Profile) => {
+    setHasFetched(true);
+    try {
+      const params = new URLSearchParams();
+      params.append("boardType", profile.boardType);
+      params.append("monitorOrientation", profile.monitorOrientation);
+      
+      const response = await axios.get(`/api/listfiles?${params.toString()}`);
       const data = response.data;
       if (Array.isArray(data)) {
         setSummaries(data as RomSummary[]);
@@ -168,6 +195,7 @@ function UploadRom() {
     }
   };
 
+  // Build a map of monitor orientation name -> set of file names (if available)
   const handleCreateProfile = async () => {
     if (!newProfileName.trim()) {
       alert("Profile name is required");
@@ -177,7 +205,7 @@ function UploadRom() {
       const response = await axios.post("/api/profiles", {
         name: newProfileName,
         boardType: newProfileBoard,
-        controlScheme: newProfileControl,
+        monitorOrientation: newProfileMonitorOrientation,
         ip: newProfileIp,
         notes: newProfileNotes,
       });
@@ -202,7 +230,7 @@ function UploadRom() {
       await axios.put(`/api/profiles/${editingProfile.id}`, {
         name: newProfileName,
         boardType: newProfileBoard,
-        controlScheme: newProfileControl,
+        monitorOrientation: newProfileMonitorOrientation,
         ip: newProfileIp,
         notes: newProfileNotes,
       });
@@ -240,7 +268,7 @@ function UploadRom() {
     setEditingProfile(null);
     setNewProfileName("");
     setNewProfileBoard("Naomi 1");
-    setNewProfileControl("1P Action");
+    setNewProfileMonitorOrientation("Horizontal/Yoko");
     setNewProfileIp("");
     setNewProfileNotes("");
   };
@@ -249,17 +277,16 @@ function UploadRom() {
     setEditingProfile(profile);
     setNewProfileName(profile.name);
     setNewProfileBoard(profile.boardType);
-    setNewProfileControl(profile.controlScheme);
-    setNewProfileIp(profile.ip);
+    setNewProfileMonitorOrientation(profile.monitorOrientation);
     setNewProfileNotes(profile.notes || "");
     setShowProfileModal(true);
   };
 
-  const getControlSchemeNames = (): string[] => {
+  const getMonitorOrientationNames = (): string[] => {
     if (!boardConfig) return [];
-    if (Array.isArray(boardConfig.controlSchemes)) {
-      return boardConfig.controlSchemes.map(cs =>
-        typeof cs === "string" ? cs : cs.name
+    if (Array.isArray(boardConfig.monitorOrientations)) {
+      return boardConfig.monitorOrientations.map(mo =>
+        typeof mo === "string" ? mo : mo.name
       );
     }
     return [];
@@ -310,7 +337,7 @@ function UploadRom() {
         </div>
         {selectedProfile && (
           <div style={{ fontSize: "0.9em", color: "#333" }}>
-            Board: {selectedProfile.boardType} | Control: {selectedProfile.controlScheme} | IP: {selectedProfile.ip}
+            Board: {selectedProfile.boardType} | Orientation: {selectedProfile.monitorOrientation} | IP: {selectedProfile.ip}
           </div>
         )}
       </div>
@@ -395,12 +422,12 @@ function UploadRom() {
               ))}
             </select>
             <select
-              value={newProfileControl}
-              onChange={(e) => setNewProfileControl(e.target.value)}
+              value={newProfileMonitorOrientation}
+              onChange={(e) => setNewProfileMonitorOrientation(e.target.value)}
               style={{ width: "100%", padding: "8px", marginBottom: "10px", boxSizing: "border-box" }}
             >
-              {getControlSchemeNames().map(cs => (
-                <option key={cs} value={cs}>{cs}</option>
+              {getMonitorOrientationNames().map(mo => (
+                <option key={mo} value={mo}>{mo}</option>
               ))}
             </select>
             <input
@@ -455,9 +482,9 @@ function UploadRom() {
           }}
         >
           <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
-            {summaries.map((file, index) => (
+            {summaries.map((file) => (
               <li
-                key={index}
+                key={file.fileName}
                 style={{
                   cursor: "pointer",
                   marginBottom: "20px",
