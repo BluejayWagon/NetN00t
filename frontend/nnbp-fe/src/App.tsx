@@ -1,5 +1,33 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import {
+  Box,
+  Button,
+  CssBaseline,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+  Paper,
+  Stack,
+  Card,
+  CardMedia,
+  CardContent,
+  Typography,
+  AppBar,
+  Toolbar,
+  Alert,
+} from "@mui/material";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
+import AddIcon from "@mui/icons-material/Add";
+import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 
 // lightweight representation returned by /api/listfiles
 interface RomSummary {
@@ -49,6 +77,17 @@ interface BoardConfig {
   monitorOrientations: MonitorOrientation[];
   defaultPictures?: Record<string, string>;
 }
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#ff6600',
+    },
+    background: {
+      default: '#fef7f0',
+    },
+  },
+});
 
 function UploadRom() {
   const [selectedFileName, setSelectedFileName] = useState("");
@@ -293,271 +332,304 @@ function UploadRom() {
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", height: "100vh", overflow: "hidden" }}>
-      <h1>Netboot Portal</h1>
+    <ThemeProvider theme={theme}>
+      <>
+        <CssBaseline />
+        <Box sx={{ display: "flex", flexDirection: "column", height: "100vh", bgcolor: "#fef7f0" }}>
+          {/* Header */}
+          <AppBar position="static">
+            <Toolbar>
+              <Typography variant="h1" sx={{ fontSize: "1.5rem", flexGrow: 1, color: "white" }}>
+                🎮 Netboot Portal
+              </Typography>
+            </Toolbar>
+          </AppBar>
 
-      {/* Profile Panel */}
-      <div style={{
-        padding: "10px",
-        backgroundColor: "#f5f5f5",
-        borderBottom: "2px solid #ccc",
-      }}>
-        <div style={{ marginBottom: "10px" }}>
-          <strong>Active Profile:</strong>
-          <select
-            value={selectedProfileId}
-            onChange={(e) => setSelectedProfileId(e.target.value)}
-            style={{ marginLeft: "10px", padding: "5px" }}
-          >
-            <option value="">Select a profile...</option>
-            {profiles.map(p => (
-              <option key={p.id} value={p.id}>{p.name}</option>
-            ))}
-          </select>
-          <button onClick={() => { resetProfileForm(); setShowProfileModal(true); }}
-            style={{ marginLeft: "10px", padding: "5px 10px" }}>
-            New Profile
-          </button>
+        {/* Profile Panel */}
+        <Paper sx={{ p: 2, borderRadius: 0 }}>
+          <Stack direction="row" spacing={2} alignItems="center" sx={{ mb: 2 }}>
+            <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
+              Active Profile:
+            </Typography>
+            <FormControl sx={{ minWidth: 200 }}>
+              <Select
+                value={selectedProfileId}
+                onChange={(e) => setSelectedProfileId(e.target.value)}
+                displayEmpty
+              >
+                <MenuItem value="">
+                  <em>Select a profile...</em>
+                </MenuItem>
+                {profiles.map((p) => (
+                  <MenuItem key={p.id} value={p.id}>
+                    {p.name}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+            <Button
+              variant="contained"
+              startIcon={<AddIcon />}
+              onClick={() => { resetProfileForm(); setShowProfileModal(true); }}
+            >
+              New Profile
+            </Button>
+            {selectedProfile && (
+              <>
+                <Button
+                  variant="outlined"
+                  startIcon={<EditIcon />}
+                  onClick={() => startEditProfile(selectedProfile)}
+                  size="small"
+                >
+                  Edit
+                </Button>
+                <Button
+                  variant="outlined"
+                  color="error"
+                  startIcon={<DeleteIcon />}
+                  onClick={() => handleDeleteProfile(selectedProfile.id)}
+                  size="small"
+                >
+                  Delete
+                </Button>
+              </>
+            )}
+          </Stack>
           {selectedProfile && (
-            <>
-              <button
-                onClick={() => startEditProfile(selectedProfile)}
-                style={{ marginLeft: "5px", padding: "5px 10px" }}
-              >
-                Edit
-              </button>
-              <button
-                onClick={() => handleDeleteProfile(selectedProfile.id)}
-                style={{ marginLeft: "5px", padding: "5px 10px", color: "red" }}
-              >
-                Delete
-              </button>
-            </>
+            <Alert severity="info">
+              <Typography variant="body2">
+                <strong>Board:</strong> {selectedProfile.boardType} | <strong>Orientation:</strong> {selectedProfile.monitorOrientation} | <strong>IP:</strong> {selectedProfile.ip}
+              </Typography>
+            </Alert>
           )}
-        </div>
-        {selectedProfile && (
-          <div style={{ fontSize: "0.9em", color: "#333" }}>
-            Board: {selectedProfile.boardType} | Orientation: {selectedProfile.monitorOrientation} | IP: {selectedProfile.ip}
-          </div>
-        )}
-      </div>
+        </Paper>
 
-      {/* Delete Confirmation Modal */}
-      {deleteConfirmId && (
-        <div style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundColor: "rgba(0,0,0,0.5)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          zIndex: 1001,
-        }}>
-          <div style={{
-            backgroundColor: "white",
-            padding: "20px",
-            borderRadius: "8px",
-            maxWidth: "300px",
-            width: "90%",
-          }}>
-            <h2>Delete Profile?</h2>
-            <p>Are you sure you want to delete this profile? This action cannot be undone.</p>
-            <div style={{ display: "flex", gap: "10px" }}>
-              <button
-                onClick={confirmDeleteProfile}
-                style={{ flex: 1, padding: "8px", backgroundColor: "#f44336", color: "white", border: "none", borderRadius: "4px" }}
-              >
-                Delete
-              </button>
-              <button
-                onClick={() => setDeleteConfirmId("")}
-                style={{ flex: 1, padding: "8px", backgroundColor: "#999", color: "white", border: "none", borderRadius: "4px" }}
-              >
-                Cancel
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Profile Modal */}
-      {showProfileModal && (
-        <div style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundColor: "rgba(0,0,0,0.5)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          zIndex: 1000,
-        }}>
-          <div style={{
-            backgroundColor: "white",
-            padding: "20px",
-            borderRadius: "8px",
-            maxWidth: "400px",
-            width: "90%",
-          }}>
-            <h2>{editingProfile ? "Edit Profile" : "Create Profile"}</h2>
-            <input
-              type="text"
-              placeholder="Profile name"
-              value={newProfileName}
-              onChange={(e) => setNewProfileName(e.target.value)}
-              style={{ width: "100%", padding: "8px", marginBottom: "10px", boxSizing: "border-box" }}
-            />
-            <select
-              value={newProfileBoard}
-              onChange={(e) => setNewProfileBoard(e.target.value)}
-              style={{ width: "100%", padding: "8px", marginBottom: "10px", boxSizing: "border-box" }}
-            >
-              {boardConfig?.boardTypes.map(bt => (
-                <option key={bt} value={bt}>{bt}</option>
-              ))}
-            </select>
-            <select
-              value={newProfileMonitorOrientation}
-              onChange={(e) => setNewProfileMonitorOrientation(e.target.value)}
-              style={{ width: "100%", padding: "8px", marginBottom: "10px", boxSizing: "border-box" }}
-            >
-              {getMonitorOrientationNames().map(mo => (
-                <option key={mo} value={mo}>{mo}</option>
-              ))}
-            </select>
-            <input
-              type="text"
-              placeholder="Naomi IP address"
-              value={newProfileIp}
-              onChange={(e) => setNewProfileIp(e.target.value)}
-              style={{ width: "100%", padding: "8px", marginBottom: "10px", boxSizing: "border-box" }}
-            />
-            <textarea
-              placeholder="Notes (optional)"
-              value={newProfileNotes}
-              onChange={(e) => setNewProfileNotes(e.target.value)}
-              style={{ width: "100%", padding: "8px", marginBottom: "10px", boxSizing: "border-box", height: "80px" }}
-            />
-            <div style={{ display: "flex", gap: "10px" }}>
-              <button
-                onClick={editingProfile ? handleUpdateProfile : handleCreateProfile}
-                style={{ flex: 1, padding: "8px", backgroundColor: "#4CAF50", color: "white", border: "none", borderRadius: "4px" }}
-              >
-                {editingProfile ? "Update" : "Create"}
-              </button>
-              <button
-                onClick={() => { setShowProfileModal(false); resetProfileForm(); }}
-                style={{ flex: 1, padding: "8px", backgroundColor: "#999", color: "white", border: "none", borderRadius: "4px" }}
-              >
-                Cancel
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* message when list was fetched and is empty */}
-      {hasFetched && summaries.length === 0 && (
-        <p style={{ marginTop: "10px", fontStyle: "italic", padding: "0 10px" }}>
-          No files found.
-        </p>
-      )}
-
-      {/* main content area: two columns */}
-      <div style={{ display: "flex", flex: 1, marginTop: "10px", minHeight: 0 }}>
-        {/* left column: summary list */}
-        <div
-          style={{
-            width: "50%",
-            flex: 1,
-            overflowY: "auto",
-            minHeight: 0,
-            border: "1px solid #ccc",
-            padding: "10px",
-          }}
+        {/* Delete Confirmation Dialog */}
+        <Dialog
+          open={!!deleteConfirmId}
+          onClose={() => setDeleteConfirmId("")}
         >
-          <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
-            {summaries.map((file) => (
-              <li
-                key={file.fileName}
-                style={{
-                  cursor: "pointer",
-                  marginBottom: "20px",
-                  textAlign: "center",
-                }}
-                onClick={() => fetchDetail(file.fileName)}
-              >
-                <strong>{file.name}</strong>
-                <br />
-                <img
-                  src={file.imageUrl}
-                  alt={file.name}
-                  style={{
-                    width: "150px",
-                    height: "auto",
-                    marginTop: "10px",
-                    borderRadius: "8px",
-                  }}
-                />
-              </li>
-            ))}
-          </ul>
-        </div>
+          <DialogTitle>Delete Profile?</DialogTitle>
+          <DialogContent>
+            <Typography>
+              Are you sure you want to delete this profile? This action cannot be undone.
+            </Typography>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={() => setDeleteConfirmId("")} color="inherit">
+              Cancel
+            </Button>
+            <Button
+              onClick={confirmDeleteProfile}
+              variant="contained"
+              color="error"
+            >
+              Delete
+            </Button>
+          </DialogActions>
+        </Dialog>
 
-        {/* right column: detail view – sticky so it stays in view while the left list scrolls */}
-        <div style={{
-            width: "50%",
-            padding: "10px",
-            position: "sticky",
-            top: "0",
-            alignSelf: "flex-start",
-            /* right column is not scrollable; content exceeding height will be clipped */
-        }}>
-          {selectedDetail ? (
-            <div>
-              <h2>{selectedDetail.Name}</h2>
-              <img
-                src={`/images/${selectedDetail.PictureName}`}
-                alt={selectedDetail.Name}
-                style={{ width: "200px", borderRadius: "8px" }}
+        {/* Profile Modal */}
+        <Dialog
+          open={showProfileModal}
+          onClose={() => { setShowProfileModal(false); resetProfileForm(); }}
+          maxWidth="sm"
+          fullWidth
+        >
+          <DialogTitle sx={{ pb: 3 }}>
+            {editingProfile ? "Edit Profile" : "Create New Profile"}
+          </DialogTitle>
+          <DialogContent sx={{ pt: 5, overflow: 'visible' }}>
+            <Stack spacing={2}>
+              <TextField
+                fullWidth
+                label="Profile Name"
+                placeholder="My Arcade Cabinet"
+                value={newProfileName}
+                onChange={(e) => setNewProfileName(e.target.value)}
               />
-              <p>Board type: {selectedDetail.BoardType}</p>
-              {selectedDetail.Genre && <p>Genre: {selectedDetail.Genre}</p>}
-              {selectedDetail.Tate !== undefined && (
-                <p>
-                  Orientation:{" "}
-                  {selectedDetail.Tate ? "Vertical/TATE" : "Horizontal"}
-                </p>
-              )}
-              {selectedDetail.Description && (
-                <p>{selectedDetail.Description}</p>
-              )}
-              <button
-                onClick={handleUpload}
-                disabled={!selectedFileName || !selectedProfile}
-                style={{
-                  padding: "10px 20px",
-                  backgroundColor: selectedFileName && selectedProfile ? "#4CAF50" : "#ccc",
-                  color: "white",
-                  border: "none",
-                  borderRadius: "4px",
-                  cursor: selectedFileName && selectedProfile ? "pointer" : "not-allowed",
-                }}
-              >
-                {selectedProfile ? "Upload to " + selectedProfile.name : "Select a profile to upload"}
-              </button>
-            </div>
-          ) : (
-            <p>Select a ROM to see full details on the right.</p>
-          )}
-        </div>
-      </div>
-    </div>
+              <FormControl fullWidth>
+                <InputLabel>Board Type</InputLabel>
+                <Select
+                  value={newProfileBoard}
+                  onChange={(e) => setNewProfileBoard(e.target.value)}
+                  label="Board Type"
+                >
+                  {boardConfig?.boardTypes.map((bt) => (
+                    <MenuItem key={bt} value={bt}>
+                      {bt}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+              <FormControl fullWidth>
+                <InputLabel>Monitor Orientation</InputLabel>
+                <Select
+                  value={newProfileMonitorOrientation}
+                  onChange={(e) => setNewProfileMonitorOrientation(e.target.value)}
+                  label="Monitor Orientation"
+                >
+                  {getMonitorOrientationNames().map((mo) => (
+                    <MenuItem key={mo} value={mo}>
+                      {mo}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+              <TextField
+                fullWidth
+                label="Naomi IP Address"
+                placeholder="192.168.1.100"
+                value={newProfileIp}
+                onChange={(e) => setNewProfileIp(e.target.value)}
+              />
+              <TextField
+                fullWidth
+                label="Notes (optional)"
+                placeholder="Add any notes about this profile..."
+                multiline
+                rows={4}
+                value={newProfileNotes}
+                onChange={(e) => setNewProfileNotes(e.target.value)}
+              />
+            </Stack>
+          </DialogContent>
+          <DialogActions sx={{ p: 2 }}>
+            <Button 
+              onClick={() => { setShowProfileModal(false); resetProfileForm(); }}
+              color="inherit"
+            >
+              Cancel
+            </Button>
+            <Button
+              onClick={editingProfile ? handleUpdateProfile : handleCreateProfile}
+              variant="contained"
+              color="primary"
+            >
+              {editingProfile ? "Update" : "Create"}
+            </Button>
+          </DialogActions>
+        </Dialog>
+
+        {/* Main content area */}
+        <Box sx={{ display: "flex", flex: 1, minHeight: 0, overflow: "hidden" }}>
+          {/* Left column: ROM list */}
+          <Box
+            sx={{
+              width: "50%",
+              overflowY: "auto",
+              p: 2,
+              borderRight: "1px solid #e0e0e0",
+            }}
+          >
+            {!hasFetched ? (
+              <Typography variant="body1" color="text.secondary">
+                Loading...
+              </Typography>
+            ) : summaries.length === 0 ? (
+              <Alert severity="info">No files found. Try a different profile.</Alert>
+            ) : (
+              <Box sx={{ display: "grid", gridTemplateColumns: "1fr", gap: 3 }}>
+                {summaries.map((file) => (
+                  <Card
+                    key={file.fileName}
+                    sx={{
+                      cursor: "pointer",
+                      transition: "all 0.2s ease-in-out",
+                      "&:hover": {
+                        boxShadow: 4,
+                        transform: "translateY(-4px)",
+                      },
+                      bgcolor: selectedFileName === file.fileName ? "primary.light" : "background.paper",
+                    }}
+                    onClick={() => fetchDetail(file.fileName)}
+                  >
+                    <CardMedia
+                      component="img"
+                      height="120"
+                      image={file.imageUrl}
+                      alt={file.name}
+                      sx={{ objectFit: "contain", bgcolor: "#f5f5f5" }}
+                    />
+                    <CardContent sx={{ textAlign: "center" }}>
+                      <Typography variant="subtitle2" fontWeight="bold">
+                        {file.name}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                ))}
+              </Box>
+            )}
+          </Box>
+
+          {/* Right column: ROM details */}
+          <Box
+            sx={{
+              width: "50%",
+              p: 2,
+              overflowY: "auto",
+            }}
+          >
+            {selectedDetail ? (
+              <Stack spacing={2}>
+                <Typography variant="h2">{selectedDetail.Name}</Typography>
+                <Box
+                  component="img"
+                  src={`/images/${selectedDetail.PictureName}`}
+                  alt={selectedDetail.Name}
+                  sx={{ maxWidth: "100%", maxHeight: "300px", height: "auto", borderRadius: 2, objectFit: "contain" }}
+                />
+                <Paper variant="outlined" sx={{ p: 2 }}>
+                  <Stack spacing={1}>
+                    <Typography variant="body2">
+                      <strong>Board Type:</strong> {selectedDetail.BoardType}
+                    </Typography>
+                    {selectedDetail.Genre && (
+                      <Typography variant="body2">
+                        <strong>Genre:</strong> {selectedDetail.Genre}
+                      </Typography>
+                    )}
+                    {selectedDetail.Tate !== undefined && (
+                      <Typography variant="body2">
+                        <strong>Orientation:</strong>{" "}
+                        {selectedDetail.Tate ? "Vertical/TATE" : "Horizontal"}
+                      </Typography>
+                    )}
+                  </Stack>
+                </Paper>
+                {selectedDetail.Description && (
+                  <Box>
+                    <Typography variant="body2" paragraph>
+                      {selectedDetail.Description}
+                    </Typography>
+                  </Box>
+                )}
+                <Button
+                  variant="contained"
+                  size="large"
+                  startIcon={<CloudUploadIcon />}
+                  onClick={handleUpload}
+                  disabled={!selectedFileName || !selectedProfile}
+                  fullWidth
+                >
+                  {selectedProfile
+                    ? `Upload to ${selectedProfile.name}`
+                    : "Select a profile to upload"}
+                </Button>
+              </Stack>
+            ) : (
+              <Paper variant="outlined" sx={{ p: 3, textAlign: "center" }}>
+                <Typography variant="body1" color="text.secondary">
+                  Select a ROM from the list to view details
+                </Typography>
+              </Paper>
+            )}
+          </Box>
+        </Box>
+      </Box>
+    </>
+    </ThemeProvider>
   );
 }
 
