@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.1](https://github.com/BluejayWagon/NaomiNetbootPortable/compare/v0.2.0...v0.2.1) (2026-03-08)
+
+
+### Bug Fixes
+
+* moved goreleaser into release-please job ([dd83b4b](https://github.com/BluejayWagon/NaomiNetbootPortable/commit/dd83b4bd6cda1fef0562eda5b7cdb6ac25727081))
+* moved goreleaser into release-please job ([dd83b4b](https://github.com/BluejayWagon/NaomiNetbootPortable/commit/dd83b4bd6cda1fef0562eda5b7cdb6ac25727081))
+* moved goreleaser into release-please job ([8d9d627](https://github.com/BluejayWagon/NaomiNetbootPortable/commit/8d9d6279b4a7cbefe15af11264da60c8fa3c1f98))
+
 ## [0.2.0](https://github.com/BluejayWagon/NaomiNetbootPortable/compare/v0.1.0...v0.2.0) (2026-03-08)
 
 
