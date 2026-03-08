@@ -309,6 +309,38 @@ func TestRomDetailsHandler_MethodNotAllowed(t *testing.T) {
 	}
 }
 
+// --- VersionHandler ---
+
+func TestVersionHandler_ReturnsVersion(t *testing.T) {
+	req := httptest.NewRequest(http.MethodGet, "/api/version", nil)
+	w := httptest.NewRecorder()
+	VersionHandler("v1.2.3")(w, req)
+
+	if w.Code != http.StatusOK {
+		t.Errorf("expected 200, got %d", w.Code)
+	}
+
+	var resp map[string]string
+	if err := json.NewDecoder(w.Body).Decode(&resp); err != nil {
+		t.Fatalf("failed to decode response: %v", err)
+	}
+	if resp["version"] != "v1.2.3" {
+		t.Errorf("expected version 'v1.2.3', got '%s'", resp["version"])
+	}
+}
+
+func TestVersionHandler_DevVersion(t *testing.T) {
+	req := httptest.NewRequest(http.MethodGet, "/api/version", nil)
+	w := httptest.NewRecorder()
+	VersionHandler("dev")(w, req)
+
+	var resp map[string]string
+	json.NewDecoder(w.Body).Decode(&resp)
+	if resp["version"] != "dev" {
+		t.Errorf("expected version 'dev', got '%s'", resp["version"])
+	}
+}
+
 // --- RebuildROMCache ---
 
 func TestRebuildROMCache_EmptyDirectory(t *testing.T) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, act } from '@testing-library/react';
+import { render, screen, act, fireEvent } from '@testing-library/react';
 
 // Provide a factory with bare jest.fn() stubs. CRA sets resetMocks: true, so
 // any implementations set here (e.g. mockResolvedValue) would be wiped before
@@ -23,6 +23,9 @@ beforeEach(() => {
     }
     if (url.includes('/api/config')) {
       return Promise.resolve({ data: { romDirectory: '/roms/naomi' } });
+    }
+    if (url.includes('/api/version')) {
+      return Promise.resolve({ data: { version: 'v1.0.0' } });
     }
     return Promise.resolve({ data: [] });
   });
@@ -52,6 +55,20 @@ test('shows ROM list when ROM directory is configured', async () => {
   expect(screen.queryByText(/Welcome — Set Your ROM Directory/i)).not.toBeInTheDocument();
 });
 
+test('shows about dialog with version when info button is clicked', async () => {
+  await act(async () => {
+    render(<App />);
+  });
+
+  const infoButton = screen.getByRole('button', { name: /about/i });
+  await act(async () => {
+    fireEvent.click(infoButton);
+  });
+
+  expect(screen.getByText(/About Netboot Portal/i)).toBeInTheDocument();
+  expect(screen.getByText(/v1\.0\.0/i)).toBeInTheDocument();
+});
+
 test('shows settings dialog on first run when no ROM directory set', async () => {
   (axios.get as jest.Mock).mockImplementation((url: string) => {
     if (url.includes('boardconfig')) {
@@ -59,6 +76,9 @@ test('shows settings dialog on first run when no ROM directory set', async () =>
     }
     if (url.includes('/api/config')) {
       return Promise.resolve({ data: { romDirectory: '' } });
+    }
+    if (url.includes('/api/version')) {
+      return Promise.resolve({ data: { version: 'v1.0.0' } });
     }
     return Promise.resolve({ data: [] });
   });

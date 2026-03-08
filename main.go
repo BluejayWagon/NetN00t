@@ -9,6 +9,8 @@ import (
 	"nnb-portable/web"
 )
 
+var version = "dev"
+
 //go:embed frontend/nnbp-fe/build/*
 var embeddedFrontendFiles embed.FS
 
@@ -73,6 +75,7 @@ func main() {
 	http.HandleFunc("/api/profiles/", web.ProfileHandler())
 	http.HandleFunc("/api/profiles/selected", web.ProfilesSelectedHandler())
 	http.HandleFunc("/api/boardconfig", web.BoardConfigHandler())
+	http.HandleFunc("/api/version", web.VersionHandler(version))
 
 	fmt.Println("Server listening on :8080")
 	http.ListenAndServe(":8080", nil)
