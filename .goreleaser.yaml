@@ -1,0 +1,25 @@
+version: 2
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+    goarch:
+      - amd64
+    binary: naomi-netboot-portable
+    ldflags:
+      - -s -w
+
+nfpms:
+  - package_name: naomi-netboot-portable
+    maintainer: NaomiNetbootPortable
+    description: Web application for netbooting Sega arcade hardware (Naomi 1/2, Triforce, Chihiro)
+    license: MIT
+    formats:
+      - deb
+      - rpm
