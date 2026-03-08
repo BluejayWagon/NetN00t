@@ -23,6 +23,7 @@ import {
 import { ThemeProvider, createTheme, useTheme } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 import SettingsIcon from "@mui/icons-material/Settings";
+import InfoIcon from "@mui/icons-material/Info";
 import IconButton from "@mui/material/IconButton";
 import Drawer from "@mui/material/Drawer";
 import CloseIcon from "@mui/icons-material/Close";
@@ -32,6 +33,7 @@ import RomList from "./components/RomList";
 import RomDetails from "./components/RomDetails";
 import MainLayout from "./components/MainLayout";
 import SettingsDialog from "./components/SettingsDialog";
+import AboutDialog from "./components/AboutDialog";
 
 interface RomSummary {
   name: string;
@@ -104,6 +106,8 @@ function UploadRom() {
 
   const [romDirectory, setRomDirectory] = useState<string | null>(null);
   const [showSettingsDialog, setShowSettingsDialog] = useState(false);
+  const [showAboutDialog, setShowAboutDialog] = useState(false);
+  const [version, setVersion] = useState("...");
 
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [detailDrawerOpen, setDetailDrawerOpen] = useState(false);
@@ -121,6 +125,7 @@ function UploadRom() {
     fetchConfig();
     fetchProfiles();
     fetchBoardConfig();
+    fetchVersion();
   }, []);
 
   useEffect(() => {
@@ -136,6 +141,15 @@ function UploadRom() {
       handleGetFiles();
     }
   }, [selectedProfileId, profiles]);
+
+  const fetchVersion = async () => {
+    try {
+      const response = await axios.get("/api/version");
+      setVersion(response.data.version ?? "unknown");
+    } catch {
+      setVersion("unknown");
+    }
+  };
 
   const fetchProfiles = async () => {
     try {
@@ -412,6 +426,14 @@ function UploadRom() {
                 >
                   <SettingsIcon />
                 </IconButton>
+                <IconButton
+                  color="inherit"
+                  onClick={() => setShowAboutDialog(true)}
+                  aria-label="about"
+                  sx={{ minWidth: 48, minHeight: 48 }}
+                >
+                  <InfoIcon />
+                </IconButton>
                 {isMobile && (
                   <IconButton
                     color="inherit"
@@ -447,6 +469,13 @@ function UploadRom() {
               {profilePanel}
             </Box>
           </Drawer>
+
+          {/* About Dialog */}
+          <AboutDialog
+            open={showAboutDialog}
+            version={version}
+            onClose={() => setShowAboutDialog(false)}
+          />
 
           {/* Settings / First-run Dialog */}
           <SettingsDialog

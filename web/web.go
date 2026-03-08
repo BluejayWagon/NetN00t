@@ -172,6 +172,14 @@ func ListFilesHandler(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(summaries)
 }
 
+// VersionHandler returns the current application version.
+func VersionHandler(version string) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(map[string]string{"version": version})
+	}
+}
+
 // RomDetailsHandler responds with all of the metadata for a single rom
 // specified by the fileName query parameter.
 func RomDetailsHandler(w http.ResponseWriter, r *http.Request) {

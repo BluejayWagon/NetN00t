@@ -13,7 +13,7 @@ builds:
       - amd64
     binary: naomi-netboot-portable
     ldflags:
-      - -s -w
+      - -s -w -X main.version={{.Version}}
 
 nfpms:
   - package_name: naomi-netboot-portable
