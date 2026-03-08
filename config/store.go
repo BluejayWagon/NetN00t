@@ -1,4 +1,4 @@
-package arcade_profiles
+package config
 
 import (
 	"crypto/rand"
@@ -9,6 +9,10 @@ import (
 	"path/filepath"
 	"sync"
 )
+
+type AppConfig struct {
+	RomDirectory string `json:"romDirectory"`
+}
 
 type Profile struct {
 	ID                 string `json:"id"`
@@ -42,8 +46,10 @@ type Store struct {
 	dir             string
 	profiles        profilesFile
 	boardConfig     BoardConfig
+	appConfig       AppConfig
 	profilesPath    string
 	boardConfigPath string
+	appConfigPath   string
 }
 
 // NewStore creates a new Store backed by files in dir. If files do not exist
@@ -59,11 +65,15 @@ func NewStore(dir string) (*Store, error) {
 		dir:             dir,
 		profilesPath:    filepath.Join(dir, "profiles.json"),
 		boardConfigPath: filepath.Join(dir, "boardConfig.json"),
+		appConfigPath:   filepath.Join(dir, "app.json"),
 	}
 	if err := s.loadBoardConfig(); err != nil {
 		return nil, err
 	}
 	if err := s.loadProfiles(); err != nil {
+		return nil, err
+	}
+	if err := s.loadAppConfig(); err != nil {
 		return nil, err
 	}
 	return s, nil
@@ -72,7 +82,7 @@ func NewStore(dir string) (*Store, error) {
 func (s *Store) loadBoardConfig() error {
 	s.mu.Lock()
 	defer s.mu.Unlock()
-	// If boardConfig file missing, error out since it's required and should be provided with the app (copied from embedded defaults).
+	// If boardConfig file missing, error out since it's required and should be provided with the app.
 	data, err := os.ReadFile(s.boardConfigPath)
 	if err != nil {
 		return err
@@ -119,6 +129,48 @@ func (s *Store) saveProfilesLocked() error {
 		return err
 	}
 	return os.WriteFile(s.profilesPath, data, 0o644)
+}
+
+func (s *Store) loadAppConfig() error {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+	data, err := os.ReadFile(s.appConfigPath)
+	if err != nil {
+		if os.IsNotExist(err) {
+			s.appConfig = AppConfig{}
+			return s.saveAppConfigLocked()
+		}
+		return err
+	}
+	var cfg AppConfig
+	if err := json.Unmarshal(data, &cfg); err != nil {
+		return err
+	}
+	s.appConfig = cfg
+	return nil
+}
+
+func (s *Store) saveAppConfigLocked() error {
+	data, err := json.MarshalIndent(s.appConfig, "", "  ")
+	if err != nil {
+		return err
+	}
+	return os.WriteFile(s.appConfigPath, data, 0o644)
+}
+
+// GetRomDirectory returns the configured ROM directory path.
+func (s *Store) GetRomDirectory() string {
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+	return s.appConfig.RomDirectory
+}
+
+// SetRomDirectory persists a new ROM directory path.
+func (s *Store) SetRomDirectory(path string) error {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+	s.appConfig.RomDirectory = path
+	return s.saveAppConfigLocked()
 }
 
 // GetBoardConfig returns a copy of the board/reference configuration.

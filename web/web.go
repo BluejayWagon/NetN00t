@@ -3,15 +3,15 @@ package web
 import (
 	"encoding/json"
 	"net/http"
-	"nnb-portable/arcade_profiles"
+	"nnb-portable/config"
 	files "nnb-portable/file"
 	"nnb-portable/naomi"
 	"sort"
 	"strings"
 )
 
-// BoardConfig is a type alias for the arcade_profiles BoardConfig
-type BoardConfig = arcade_profiles.BoardConfig
+// BoardConfig is a type alias for the config BoardConfig
+type BoardConfig = config.BoardConfig
 
 // romIndexCache holds the indexed ROM details for fast lookups.
 // It is initialized at startup and reused for all requests.
@@ -19,9 +19,9 @@ var (
 	romIndexCache map[string]files.FullRomDetails // keyed by lowercased filename
 )
 
-// InitializeROMCache builds and initializes the ROM index from the given directory.
-// This should be called once at startup. Returns an error if the index cannot be built.
-func InitializeROMCache(directory string) error {
+// RebuildROMCache builds and replaces the ROM index from the given directory.
+// Can be called at startup or when the ROM directory changes.
+func RebuildROMCache(directory string) error {
 	var fileList []files.FileDetails
 	err := files.GatherBinFilesRecursive(directory, &fileList)
 	if err != nil {
@@ -34,12 +34,19 @@ func InitializeROMCache(directory string) error {
 	}
 
 	fullFileDetails := files.TransformFilesToRomDetails(fileList, romDetails)
-	romIndexCache = make(map[string]files.FullRomDetails, len(fullFileDetails))
+	newCache := make(map[string]files.FullRomDetails, len(fullFileDetails))
 	for _, rom := range fullFileDetails {
 		// index by lowercased filename for case-insensitive lookup
-		romIndexCache[strings.ToLower(rom.FileName)] = rom
+		newCache[strings.ToLower(rom.FileName)] = rom
 	}
+	romIndexCache = newCache
 	return nil
+}
+
+// InitializeROMCache builds and initializes the ROM index from the given directory.
+// This should be called once at startup. Returns an error if the index cannot be built.
+func InitializeROMCache(directory string) error {
+	return RebuildROMCache(directory)
 }
 
 // boardCompatible checks if a profile's board type can play a ROM's board type.
@@ -120,8 +127,7 @@ type UploadRequest struct {
 }
 
 // UploadHandler handles the upload of a ROM file to the Naomi
-
-func UploadHandler(w http.ResponseWriter, r *http.Request, Directory string) {
+func UploadHandler(w http.ResponseWriter, r *http.Request) {
 	var request UploadRequest
 	err := json.NewDecoder(r.Body).Decode(&request)
 	if err != nil {
@@ -147,54 +153,46 @@ func UploadHandler(w http.ResponseWriter, r *http.Request, Directory string) {
 }
 
 // ListFilesHandler returns a lightweight summary of every rom found in the
-// directory.  The response only contains the name, filename and picture URL.
+// directory. The response only contains the name, filename and picture URL.
 // Query parameters can be used to filter the results:
 // - boardType: filter by board type (Naomi 1, Naomi 2, etc.)
 // - monitorOrientation: filter by monitor orientation (Horizontal/Yoko, Vertical/TATE, etc.)
-// Clients can call the detailed endpoint later when the user selects one of
-// the entries.  This reduces the amount of data transferred on initial load.
 // Uses the cached ROM index built at startup for instant responses.
-func ListFilesHandler(Directory string) http.HandlerFunc {
-	return func(w http.ResponseWriter, r *http.Request) {
-		if r.Method != http.MethodGet {
-			http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
-			return
-		}
-
-		boardType := r.URL.Query().Get("boardType")
-		monitorOrientation := r.URL.Query().Get("monitorOrientation")
-
-		summaries := GetCachedSummaries(boardType, monitorOrientation)
-		w.Header().Set("Content-Type", "application/json")
-		json.NewEncoder(w).Encode(summaries)
+func ListFilesHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
 	}
+
+	boardType := r.URL.Query().Get("boardType")
+	monitorOrientation := r.URL.Query().Get("monitorOrientation")
+
+	summaries := GetCachedSummaries(boardType, monitorOrientation)
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(summaries)
 }
 
 // RomDetailsHandler responds with all of the metadata for a single rom
-// specified by the fileName query parameter.  The ROM index is built once
-// on the first request and cached for all subsequent requests, providing
-// O(1) lookup performance even with thousands of ROMs.
-func RomDetailsHandler(Directory string) http.HandlerFunc {
-	return func(w http.ResponseWriter, r *http.Request) {
-		if r.Method != http.MethodGet {
-			http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
-			return
-		}
-
-		fileName := r.URL.Query().Get("fileName")
-		if fileName == "" {
-			http.Error(w, "Missing fileName parameter", http.StatusBadRequest)
-			return
-		}
-
-		// Look up the ROM by lowercased filename for case-insensitive matching
-		rom, found := romIndexCache[strings.ToLower(fileName)]
-		if !found {
-			http.Error(w, "ROM not found", http.StatusNotFound)
-			return
-		}
-
-		w.Header().Set("Content-Type", "application/json")
-		json.NewEncoder(w).Encode(rom)
+// specified by the fileName query parameter.
+func RomDetailsHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
 	}
+
+	fileName := r.URL.Query().Get("fileName")
+	if fileName == "" {
+		http.Error(w, "Missing fileName parameter", http.StatusBadRequest)
+		return
+	}
+
+	// Look up the ROM by lowercased filename for case-insensitive matching
+	rom, found := romIndexCache[strings.ToLower(fileName)]
+	if !found {
+		http.Error(w, "ROM not found", http.StatusNotFound)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(rom)
 }

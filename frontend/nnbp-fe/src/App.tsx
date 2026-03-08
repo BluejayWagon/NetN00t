@@ -22,6 +22,7 @@ import {
 } from "@mui/material";
 import { ThemeProvider, createTheme, useTheme } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
+import SettingsIcon from "@mui/icons-material/Settings";
 import IconButton from "@mui/material/IconButton";
 import Drawer from "@mui/material/Drawer";
 import CloseIcon from "@mui/icons-material/Close";
@@ -30,6 +31,7 @@ import ProfilePanel from "./components/ProfilePanel";
 import RomList from "./components/RomList";
 import RomDetails from "./components/RomDetails";
 import MainLayout from "./components/MainLayout";
+import SettingsDialog from "./components/SettingsDialog";
 
 interface RomSummary {
   name: string;
@@ -100,6 +102,9 @@ function UploadRom() {
   const [selectedProfile, setSelectedProfile] = useState<Profile | null>(null);
   const [boardConfig, setBoardConfig] = useState<BoardConfig | null>(null);
 
+  const [romDirectory, setRomDirectory] = useState<string | null>(null);
+  const [showSettingsDialog, setShowSettingsDialog] = useState(false);
+
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [detailDrawerOpen, setDetailDrawerOpen] = useState(false);
 
@@ -113,7 +118,7 @@ function UploadRom() {
   const [deleteConfirmId, setDeleteConfirmId] = useState<string>("");
 
   useEffect(() => {
-    handleGetFiles();
+    fetchConfig();
     fetchProfiles();
     fetchBoardConfig();
   }, []);
@@ -150,6 +155,33 @@ function UploadRom() {
       setBoardConfig(response.data as BoardConfig);
     } catch (error) {
       console.error("Error fetching board config:", error);
+    }
+  };
+
+  const fetchConfig = async () => {
+    try {
+      const response = await axios.get("/api/config");
+      const dir: string = response.data.romDirectory ?? "";
+      setRomDirectory(dir);
+      if (dir) {
+        handleGetFiles();
+      }
+    } catch (error) {
+      console.error("Error fetching config:", error);
+      setRomDirectory("");
+    }
+  };
+
+  const handleSaveConfig = async (dir: string) => {
+    try {
+      await axios.put("/api/config", { romDirectory: dir });
+      setRomDirectory(dir);
+      setShowSettingsDialog(false);
+      handleGetFiles();
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        alert("Error saving config: " + (error.response?.data || error.message));
+      }
     }
   };
 
@@ -372,6 +404,14 @@ function UploadRom() {
                 >
                   🎮 Netboot Portal
                 </Typography>
+                <IconButton
+                  color="inherit"
+                  onClick={() => setShowSettingsDialog(true)}
+                  aria-label="open settings"
+                  sx={{ minWidth: 48, minHeight: 48 }}
+                >
+                  <SettingsIcon />
+                </IconButton>
                 {isMobile && (
                   <IconButton
                     color="inherit"
@@ -407,6 +447,15 @@ function UploadRom() {
               {profilePanel}
             </Box>
           </Drawer>
+
+          {/* Settings / First-run Dialog */}
+          <SettingsDialog
+            open={showSettingsDialog || romDirectory === ""}
+            isFirstRun={romDirectory === ""}
+            romDirectory={romDirectory ?? ""}
+            onSave={handleSaveConfig}
+            onClose={() => setShowSettingsDialog(false)}
+          />
 
           {/* Delete Confirmation Dialog */}
           <Dialog

@@ -10,10 +10,6 @@ import (
 //go:embed romConfig.json
 var embeddedRomConfig []byte
 
-type Config struct {
-	RomDirectory string `json:"romDirectory"`
-}
-
 // RomDetails represents the metadata for a single ROM, as defined in the romConfig.json file.
 // This is the structure used to parse the metadata from the JSON file.  It does not
 // include the file system details, which are combined later to produce FullRomDetails.
@@ -55,22 +51,6 @@ type FileDetails struct {
 	FileName string `json:"fileName"`
 	Name     string `json:"name"`
 	FullPath string `json:"fullPath"`
-}
-
-func LoadConfig(filePath string) (*Config, error) {
-	file, err := os.Open(filePath)
-	if err != nil {
-		return nil, err
-	}
-	defer file.Close()
-
-	var config Config
-	decoder := json.NewDecoder(file)
-	err = decoder.Decode(&config)
-	if err != nil {
-		return nil, err
-	}
-	return &config, nil
 }
 
 func LoadRomDetails(filePath string) ([]RomDetails, error) {

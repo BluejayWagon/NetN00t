@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(CI=true npm test:*)",
+      "Bash(go test:*)",
+      "Bash(npm test:*)",
+      "Bash(timeout 15 npm start:*)",
+      "Bash(timeout 60 npx react-scripts:*)",
+      "Bash(cmd:*)",
+      "Bash(npm start:*)"
+    ]
+  }
+}

@@ -22,4 +22,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-arcade_profiles/profiles.json
+config/profiles.json
+config/app.json
