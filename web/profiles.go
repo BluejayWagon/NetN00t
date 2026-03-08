@@ -3,21 +3,29 @@ package web
 import (
 	"encoding/json"
 	"net/http"
-	"nnb-portable/arcade_profiles"
+	"nnb-portable/config"
 	"path"
 	"strings"
 )
 
-var profilesStore *arcade_profiles.Store
+var profilesStore *config.Store
 
-// InitializeProfilesStore creates or opens the profiles store at dir.
-func InitializeProfilesStore(dir string) error {
-	s, err := arcade_profiles.NewStore(dir)
+// InitializeStore creates or opens the config store at dir.
+func InitializeStore(dir string) error {
+	s, err := config.NewStore(dir)
 	if err != nil {
 		return err
 	}
 	profilesStore = s
 	return nil
+}
+
+// GetRomDirectory returns the ROM directory from the store.
+func GetRomDirectory() string {
+	if profilesStore == nil {
+		return ""
+	}
+	return profilesStore.GetRomDirectory()
 }
 
 // ProfilesHandler handles /api/profiles for GET (list) and POST (create).
@@ -34,7 +42,7 @@ func ProfilesHandler() http.HandlerFunc {
 			json.NewEncoder(w).Encode(list)
 			return
 		case http.MethodPost:
-			var p arcade_profiles.Profile
+			var p config.Profile
 			if err := json.NewDecoder(r.Body).Decode(&p); err != nil {
 				http.Error(w, "invalid body", http.StatusBadRequest)
 				return
@@ -83,7 +91,7 @@ func ProfileHandler() http.HandlerFunc {
 			http.Error(w, "profile not found", http.StatusNotFound)
 			return
 		case http.MethodPut:
-			var upd arcade_profiles.Profile
+			var upd config.Profile
 			if err := json.NewDecoder(r.Body).Decode(&upd); err != nil {
 				http.Error(w, "invalid body", http.StatusBadRequest)
 				return
@@ -143,9 +151,9 @@ func ProfilesSelectedHandler() http.HandlerFunc {
 }
 
 // GetBoardConfigForFiltering returns the board config (used by ROM filtering).
-func GetBoardConfigForFiltering() arcade_profiles.BoardConfig {
+func GetBoardConfigForFiltering() config.BoardConfig {
 	if profilesStore == nil {
-		return arcade_profiles.BoardConfig{}
+		return config.BoardConfig{}
 	}
 	return profilesStore.GetBoardConfig()
 }
