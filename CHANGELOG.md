@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.3](https://github.com/BluejayWagon/NaomiNetbootPortable/compare/v0.2.2...v0.2.3) (2026-03-12)
+
+
+### Bug Fixes
+
+* small frontend fixes ([0d17519](https://github.com/BluejayWagon/NaomiNetbootPortable/commit/0d17519948e2e9beeda7bb5ed81470370b516e3d))
+* small frontend fixes ([9a19051](https://github.com/BluejayWagon/NaomiNetbootPortable/commit/9a19051c56e64be6833097f0cb95044406174061))
+
 ## [0.2.2](https://github.com/BluejayWagon/NaomiNetbootPortable/compare/v0.2.1...v0.2.2) (2026-03-12)
 
 
