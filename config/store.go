@@ -2,6 +2,7 @@ package config
 
 import (
 	"crypto/rand"
+	_ "embed"
 	"encoding/hex"
 	"encoding/json"
 	"errors"
@@ -9,6 +10,9 @@ import (
 	"path/filepath"
 	"sync"
 )
+
+//go:embed boardConfig.json
+var embeddedBoardConfig []byte
 
 type AppConfig struct {
 	RomDirectory string `json:"romDirectory"`
@@ -42,14 +46,13 @@ type BoardConfig struct {
 }
 
 type Store struct {
-	mu              sync.RWMutex
-	dir             string
-	profiles        profilesFile
-	boardConfig     BoardConfig
-	appConfig       AppConfig
-	profilesPath    string
-	boardConfigPath string
-	appConfigPath   string
+	mu           sync.RWMutex
+	dir          string
+	profiles     profilesFile
+	boardConfig  BoardConfig
+	appConfig    AppConfig
+	profilesPath string
+	appConfigPath string
 }
 
 // NewStore creates a new Store backed by files in dir. If files do not exist
@@ -62,10 +65,9 @@ func NewStore(dir string) (*Store, error) {
 		return nil, err
 	}
 	s := &Store{
-		dir:             dir,
-		profilesPath:    filepath.Join(dir, "profiles.json"),
-		boardConfigPath: filepath.Join(dir, "boardConfig.json"),
-		appConfigPath:   filepath.Join(dir, "app.json"),
+		dir:           dir,
+		profilesPath:  filepath.Join(dir, "profiles.json"),
+		appConfigPath: filepath.Join(dir, "app.json"),
 	}
 	if err := s.loadBoardConfig(); err != nil {
 		return nil, err
@@ -82,26 +84,14 @@ func NewStore(dir string) (*Store, error) {
 func (s *Store) loadBoardConfig() error {
 	s.mu.Lock()
 	defer s.mu.Unlock()
-	// If boardConfig file missing, error out since it's required and should be provided with the app.
-	data, err := os.ReadFile(s.boardConfigPath)
-	if err != nil {
-		return err
-	}
 	var cfg BoardConfig
-	if err := json.Unmarshal(data, &cfg); err != nil {
+	if err := json.Unmarshal(embeddedBoardConfig, &cfg); err != nil {
 		return err
 	}
 	s.boardConfig = cfg
 	return nil
 }
 
-func (s *Store) saveBoardConfigLocked() error {
-	data, err := json.MarshalIndent(s.boardConfig, "", "  ")
-	if err != nil {
-		return err
-	}
-	return os.WriteFile(s.boardConfigPath, data, 0o644)
-}
 
 func (s *Store) loadProfiles() error {
 	s.mu.Lock()

@@ -53,22 +53,6 @@ type FileDetails struct {
 	FullPath string `json:"fullPath"`
 }
 
-func LoadRomDetails(filePath string) ([]RomDetails, error) {
-	file, err := os.Open(filePath)
-	if err != nil {
-		return nil, err
-	}
-	defer file.Close()
-
-	var romDetails []RomDetails
-	decoder := json.NewDecoder(file)
-	err = decoder.Decode(&romDetails)
-	if err != nil {
-		return nil, err
-	}
-	return romDetails, nil
-}
-
 func LoadRomDetailsFromEmbedded() ([]RomDetails, error) {
 	var romDetails []RomDetails
 	err := json.Unmarshal(embeddedRomConfig, &romDetails)
