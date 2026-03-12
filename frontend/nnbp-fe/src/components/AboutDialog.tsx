@@ -22,7 +22,6 @@ function AboutDialog({ open, version, onClose }: AboutDialogProps) {
       <DialogContent>
         <Typography variant="body1" gutterBottom>
           A self-contained web application for netbooting Sega arcade hardware
-          over the DIMM netboot protocol.
         </Typography>
         <Typography variant="body2" color="text.secondary" gutterBottom>
           Supports: Naomi 1, Naomi 2, Triforce, Chihiro
