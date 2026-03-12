@@ -1,32 +1,15 @@
 package config
 
 import (
-	"encoding/json"
 	"os"
 	"path/filepath"
 	"testing"
 )
 
-// newTestStore creates a temporary Store with a minimal boardConfig.json.
+// newTestStore creates a temporary Store backed by the embedded board config.
 func newTestStore(t *testing.T) *Store {
 	t.Helper()
 	tmp := t.TempDir()
-
-	boardCfg := BoardConfig{
-		BoardTypes: []string{"Naomi 1", "Naomi 2", "Triforce"},
-		MonitorOrientations: []MonitorfOrientation{
-			{Name: "Horizontal/Yoko", Description: "Landscape"},
-			{Name: "Vertical/Tate", Description: "Portrait"},
-		},
-	}
-	data, err := json.Marshal(boardCfg)
-	if err != nil {
-		t.Fatal(err)
-	}
-	if err := os.WriteFile(filepath.Join(tmp, "boardConfig.json"), data, 0644); err != nil {
-		t.Fatal(err)
-	}
-
 	s, err := NewStore(tmp)
 	if err != nil {
 		t.Fatalf("NewStore failed: %v", err)
@@ -41,12 +24,12 @@ func TestNewStore_EmptyDirRequired(t *testing.T) {
 	}
 }
 
-func TestNewStore_MissingBoardConfig(t *testing.T) {
+func TestNewStore_SucceedsWithoutBoardConfigFile(t *testing.T) {
 	tmp := t.TempDir()
-	// No boardConfig.json — NewStore should fail
+	// No boardConfig.json on disk — NewStore should succeed using embedded data
 	_, err := NewStore(tmp)
-	if err == nil {
-		t.Error("expected error when boardConfig.json is missing")
+	if err != nil {
+		t.Errorf("expected NewStore to succeed with embedded board config, got: %v", err)
 	}
 }
 
@@ -60,10 +43,6 @@ func TestNewStore_StartsEmpty(t *testing.T) {
 
 func TestNewStore_CreatesAppJson(t *testing.T) {
 	tmp := t.TempDir()
-
-	boardCfg := BoardConfig{BoardTypes: []string{"Naomi 1"}}
-	data, _ := json.Marshal(boardCfg)
-	os.WriteFile(filepath.Join(tmp, "boardConfig.json"), data, 0644)
 
 	_, err := NewStore(tmp)
 	if err != nil {
@@ -294,13 +273,6 @@ func TestGetProfiles_ReturnsCopy(t *testing.T) {
 func TestStore_PersistsAcrossReopen(t *testing.T) {
 	tmp := t.TempDir()
 
-	boardCfg := BoardConfig{
-		BoardTypes:          []string{"Naomi 1"},
-		MonitorOrientations: []MonitorfOrientation{{Name: "Horizontal/Yoko"}},
-	}
-	data, _ := json.Marshal(boardCfg)
-	os.WriteFile(filepath.Join(tmp, "boardConfig.json"), data, 0644)
-
 	s1, _ := NewStore(tmp)
 	id, _ := s1.AddProfile(Profile{Name: "Persistent", BoardType: "Naomi 1", IP: "192.168.1.1"})
 	_ = s1.SetSelected(id)
@@ -332,10 +304,6 @@ func TestGetRomDirectory_DefaultEmpty(t *testing.T) {
 
 func TestSetRomDirectory_PersistsAcrossReopen(t *testing.T) {
 	tmp := t.TempDir()
-
-	boardCfg := BoardConfig{BoardTypes: []string{"Naomi 1"}}
-	data, _ := json.Marshal(boardCfg)
-	os.WriteFile(filepath.Join(tmp, "boardConfig.json"), data, 0644)
 
 	s1, _ := NewStore(tmp)
 	if err := s1.SetRomDirectory("/roms/naomi"); err != nil {
