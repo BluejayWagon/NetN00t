@@ -59,7 +59,7 @@ function SettingsDialog({
           autoFocus
           fullWidth
           label="ROM Directory"
-          placeholder="Z:\Games\Naomi\Roms"
+          placeholder="C:\Games\Naomi\Roms"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => {

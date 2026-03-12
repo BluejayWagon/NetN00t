@@ -37,7 +37,7 @@ export default function RomList({
 
   if (summaries.length === 0) {
     return (
-      <Alert severity="info">No files found. Try a different profile.</Alert>
+      <Alert severity="info">No files found. Try a different profile or edit your ROM file location in Settings.</Alert>
     );
   }
 
