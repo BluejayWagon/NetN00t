@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.2](https://github.com/BluejayWagon/NaomiNetbootPortable/compare/v0.2.1...v0.2.2) (2026-03-12)
+
+
+### Bug Fixes
+
+* embed board config ([7b15277](https://github.com/BluejayWagon/NaomiNetbootPortable/commit/7b152773970b288e654d5bfbda4a97b76a69dd2e))
+* embed board config ([7b15277](https://github.com/BluejayWagon/NaomiNetbootPortable/commit/7b152773970b288e654d5bfbda4a97b76a69dd2e))
+* embed board config ([caf662d](https://github.com/BluejayWagon/NaomiNetbootPortable/commit/caf662dc5d72697fffaa4b602b7e428208565c85))
+
 ## [0.2.1](https://github.com/BluejayWagon/NaomiNetbootPortable/compare/v0.2.0...v0.2.1) (2026-03-08)
 
 
