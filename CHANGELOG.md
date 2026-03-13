@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.1](https://github.com/BluejayWagon/NetN00t/compare/v0.3.0...v0.3.1) (2026-03-13)
+
+
+### Bug Fixes
+
+* changed repo and product name ([81b7ea4](https://github.com/BluejayWagon/NetN00t/commit/81b7ea474529f5c559c619e1270592e8e326cc45))
+* changed repo and product name ([9e87a9a](https://github.com/BluejayWagon/NetN00t/commit/9e87a9a887678bfcd3fef897189d21be878e7086))
+
 ## [0.3.0](https://github.com/BluejayWagon/NaomiNetbootPortable/compare/v0.2.3...v0.3.0) (2026-03-13)
 
 
