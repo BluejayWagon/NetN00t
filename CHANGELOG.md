@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0](https://github.com/BluejayWagon/NaomiNetbootPortable/compare/v0.2.3...v0.3.0) (2026-03-13)
+
+
+### Features
+
+* releases install as systemd service ([9ce6ebc](https://github.com/BluejayWagon/NaomiNetbootPortable/commit/9ce6ebcc7e9453652aead7b4a571b0a587af9df8))
+* releases install as systemd service ([b93cec0](https://github.com/BluejayWagon/NaomiNetbootPortable/commit/b93cec0fb28d21f67919f50cef37a9a0bf717f4c))
+
 ## [0.2.3](https://github.com/BluejayWagon/NaomiNetbootPortable/compare/v0.2.2...v0.2.3) (2026-03-12)
 
 
