@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	files "nnb-portable/file"
+	files "netn00t/file"
 )
 
 // setupTestCache seeds the package-level romIndexCache for use in tests.

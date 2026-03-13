@@ -3,9 +3,9 @@ package web
 import (
 	"encoding/json"
 	"net/http"
-	"nnb-portable/config"
-	files "nnb-portable/file"
-	"nnb-portable/naomi"
+	"netn00t/config"
+	files "netn00t/file"
+	"netn00t/naomi"
 	"sort"
 	"strings"
 )

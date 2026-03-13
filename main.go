@@ -6,12 +6,12 @@ import (
 	"fmt"
 	"io/fs"
 	"net/http"
-	"nnb-portable/web"
+	"netn00t/web"
 )
 
 var version = "dev"
 
-//go:embed frontend/nnbp-fe/build/*
+//go:embed frontend/netn00t-fe/build/*
 var embeddedFrontendFiles embed.FS
 
 //go:embed file/images/*
@@ -24,8 +24,8 @@ func main() {
 	flag.Parse()
 
 	if *mode == "prod" {
-		fmt.Println("Running in production mode, serving frontend from ./frontend/nnbp-fe/build")
-		subFS, err := fs.Sub(embeddedFrontendFiles, "frontend/nnbp-fe/build")
+		fmt.Println("Running in production mode, serving frontend from ./frontend/netn00t-fe/build")
+		subFS, err := fs.Sub(embeddedFrontendFiles, "frontend/netn00t-fe/build")
 		if err != nil {
 			fmt.Println("Error accessing embedded frontend files:", err)
 			return

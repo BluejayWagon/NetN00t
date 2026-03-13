@@ -1,0 +1,15 @@
+[Unit]
+Description=NetN00t
+After=network.target
+
+[Service]
+Type=simple
+User=naomi
+Group=naomi
+ExecStart=/usr/bin/netn00t --data /var/lib/netn00t
+StateDirectory=netn00t
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

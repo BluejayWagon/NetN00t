@@ -3,7 +3,7 @@ package web
 import (
 	"encoding/json"
 	"net/http"
-	"nnb-portable/config"
+	"netn00t/config"
 	"path"
 	"strings"
 )
