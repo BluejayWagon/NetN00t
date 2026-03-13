@@ -20,6 +20,7 @@ var embeddedImageFiles embed.FS
 func main() {
 	mode := flag.String("mode", "prod", "Mode to run the server in: 'prod' for production, 'dev' for development")
 	dataDir := flag.String("data", "./config", "Path to app data directory")
+	port := flag.String("port", "8080", "Port to listen on")
 	flag.Parse()
 
 	if *mode == "prod" {
@@ -77,6 +78,7 @@ func main() {
 	http.HandleFunc("/api/boardconfig", web.BoardConfigHandler())
 	http.HandleFunc("/api/version", web.VersionHandler(version))
 
-	fmt.Println("Server listening on :8080")
-	http.ListenAndServe(":8080", nil)
+	addr := ":" + *port
+	fmt.Println("Server listening on", addr)
+	http.ListenAndServe(addr, nil)
 }

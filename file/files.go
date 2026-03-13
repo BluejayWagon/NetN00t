@@ -107,24 +107,3 @@ func TransformFilesToRomDetails(filelist []FileDetails, romDetails []RomDetails)
 	}
 	return transformed
 }
-
-// TransformFilesToSummaries produces a list of RomSummary objects.  Only the
-// minimum fields necessary for the initial listing are populated.  This is
-// useful when the client only needs the picture and name and will request
-// further details later.
-func TransformFilesToSummaries(filelist []FileDetails) ([]RomSummary, error) {
-	romDetails, err := LoadRomDetailsFromEmbedded()
-	if err != nil {
-		return nil, err
-	}
-	transformedFiles := TransformFilesToRomDetails(filelist, romDetails)
-	summaries := make([]RomSummary, 0, len(transformedFiles))
-	for _, rom := range transformedFiles {
-		summaries = append(summaries, RomSummary{
-			Name:     rom.Name,
-			FileName: rom.FileName,
-			ImageUrl: "/images/" + strings.TrimSpace(rom.PictureName),
-		})
-	}
-	return summaries, nil
-}

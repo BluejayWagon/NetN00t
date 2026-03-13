@@ -23,3 +23,10 @@ nfpms:
     formats:
       - deb
       - rpm
+    contents:
+      - src: packaging/naomi-netboot-portable.service
+        dst: /usr/lib/systemd/system/naomi-netboot-portable.service
+    scripts:
+      preinstall: packaging/scripts/preinstall.sh
+      postinstall: packaging/scripts/postinstall.sh
+      preremove: packaging/scripts/preremove.sh
