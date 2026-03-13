@@ -5,25 +5,12 @@ import (
 	"encoding/json"
 	"net/http"
 	"net/http/httptest"
-	"os"
-	"path/filepath"
 	"testing"
 )
 
-// initTestStore initializes a temporary profilesStore for config handler tests.
 func initTestStore(t *testing.T) {
 	t.Helper()
-	tmp := t.TempDir()
-
-	boardCfg := map[string]interface{}{
-		"boardTypes":          []string{"Naomi 1"},
-		"monitorOrientations": []map[string]string{{"name": "Horizontal/Yoko"}},
-	}
-	data, _ := json.Marshal(boardCfg)
-	if err := os.WriteFile(filepath.Join(tmp, "boardConfig.json"), data, 0644); err != nil {
-		t.Fatalf("failed to write boardConfig.json: %v", err)
-	}
-	if err := InitializeStore(tmp); err != nil {
+	if err := InitializeStore(t.TempDir()); err != nil {
 		t.Fatalf("InitializeStore failed: %v", err)
 	}
 }

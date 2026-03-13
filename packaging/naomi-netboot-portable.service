@@ -1,0 +1,15 @@
+[Unit]
+Description=Naomi Netboot Portable
+After=network.target
+
+[Service]
+Type=simple
+User=naomi
+Group=naomi
+ExecStart=/usr/bin/naomi-netboot-portable --data /var/lib/naomi-netboot-portable
+StateDirectory=naomi-netboot-portable
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

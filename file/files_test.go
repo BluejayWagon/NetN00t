@@ -99,7 +99,7 @@ func TestTransformFilesToRomDetails_NoMatch(t *testing.T) {
 
 func TestTransformFilesToRomDetails_EmptyInputs(t *testing.T) {
 	result := TransformFilesToRomDetails([]FileDetails{}, []RomDetails{})
-	if result != nil && len(result) != 0 {
+	if len(result) != 0 {
 		t.Errorf("expected empty result, got %d items", len(result))
 	}
 }
@@ -192,4 +192,3 @@ func TestGatherBinFilesRecursive_SetsFullPath(t *testing.T) {
 		t.Error("expected non-empty FullPath")
 	}
 }
-
