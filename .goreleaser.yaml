@@ -11,21 +11,21 @@ builds:
       - linux
     goarch:
       - amd64
-    binary: naomi-netboot-portable
+    binary: netn00t
     ldflags:
       - -s -w -X main.version={{.Version}}
 
 nfpms:
-  - package_name: naomi-netboot-portable
-    maintainer: NaomiNetbootPortable
+  - package_name: netn00t
+    maintainer: NetN00t
     description: Web application for netbooting Sega arcade hardware (Naomi 1/2, Triforce, Chihiro)
     license: MIT
     formats:
       - deb
       - rpm
     contents:
-      - src: packaging/naomi-netboot-portable.service
-        dst: /usr/lib/systemd/system/naomi-netboot-portable.service
+      - src: packaging/netn00t.service
+        dst: /usr/lib/systemd/system/netn00t.service
     scripts:
       preinstall: packaging/scripts/preinstall.sh
       postinstall: packaging/scripts/postinstall.sh
