@@ -1,6 +1,6 @@
 # NetN00t
 
-A self-contained web application for netbooting Sega arcade hardware. Point it at a directory of ROM files, configure your arcade board's IP, and boot games from your browser.
+A self-contained web application for netbooting Sega arcade hardware. Point it at a directory of ROM files, create a board profile, and boot games from your browser.
 
 **Supported hardware:** Naomi 1, Naomi 2, Triforce, Chihiro
 
@@ -61,12 +61,38 @@ Configuration and profiles are stored in `/var/lib/netn00t/` (package installs) 
 
 ---
 
+## Profiles
+
+A profile represents one of your arcade cabinets. Each profile stores:
+
+- **Name** — a label for the cabinet (e.g. "Naomi Cabinet 1")
+- **Board type** — the hardware inside (Naomi 1, Naomi 2, Triforce, or Chihiro)
+- **Monitor orientation** — horizontal or vertical (tate), used to filter out games that won't display correctly
+- **IP address** — the IP assigned to the arcade board so NetN00t knows where to send the ROM.
+- **Notes** — optional field for your own reference
+
+You can create as many profiles as you have cabinets. The active profile is remembered between sessions.
+
+### Automatic ROM filtering
+
+When a profile is selected, the ROM list is automatically filtered to show only games compatible with that board type and monitor orientation. For example:
+
+- A **Naomi 2** profile will show Naomi 1, Naomi 2, and Atomiswave games (Naomi 2 is backwards-compatible)
+- A **Triforce** profile will show only Triforce games
+- A profile set to **vertical** orientation will only show tate (vertical) games
+
+This means you never have to manually hunt for compatible games — just pick your cabinet and browse.
+
+---
+
 ## Usage
 
 1. Open `http://<host-ip>:8080` in a browser
 2. Select an arcade board profile from the profile selector
 3. Browse the ROM list — it automatically filters to games compatible with your selected board
 4. Click a ROM to view details, then click **Upload** to netboot it to the arcade board
+
+![Selecting a ROM and viewing details](docs/rom-select-demo.gif)
 
 ---
 
