@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.2](https://github.com/BluejayWagon/NetN00t/compare/v0.3.1...v0.3.2) (2026-03-14)
+
+
+### Bug Fixes
+
+* added pwa support and fixed some minor details ([e750848](https://github.com/BluejayWagon/NetN00t/commit/e7508482d9c3555dae37439bd5c4fdff47db1664))
+* corrected tests ([60f1cef](https://github.com/BluejayWagon/NetN00t/commit/60f1cef5926b3930141055fac855a4592102958b))
+
 ## [0.3.1](https://github.com/BluejayWagon/NetN00t/compare/v0.3.0...v0.3.1) (2026-03-13)
 
 
