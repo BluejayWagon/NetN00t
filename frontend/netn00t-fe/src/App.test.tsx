@@ -44,7 +44,7 @@ test('renders the app header', async () => {
   await act(async () => {
     render(<App />);
   });
-  expect(screen.getByText(/Netboot Portal/i)).toBeInTheDocument();
+  expect(screen.getByText(/NetN00t Portal/i)).toBeInTheDocument();
 });
 
 test('shows ROM list when ROM directory is configured', async () => {
@@ -65,7 +65,7 @@ test('shows about dialog with version when info button is clicked', async () => 
     fireEvent.click(infoButton);
   });
 
-  expect(screen.getByText(/About Netboot Portal/i)).toBeInTheDocument();
+  expect(screen.getByText(/About NetN00t/i)).toBeInTheDocument();
   expect(screen.getByText(/v1\.0\.0/i)).toBeInTheDocument();
 });
 

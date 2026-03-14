@@ -18,7 +18,7 @@ interface AboutDialogProps {
 function AboutDialog({ open, version, onClose }: AboutDialogProps) {
   return (
     <Dialog open={open} onClose={onClose} maxWidth="xs" fullWidth>
-      <DialogTitle>About Netboot Portal</DialogTitle>
+      <DialogTitle>About NetN00t</DialogTitle>
       <DialogContent>
         <Typography variant="body1" gutterBottom>
           A self-contained web application for netbooting Sega arcade hardware
