@@ -226,7 +226,7 @@
   },
   {
       "name":  "Gigawing2",
-      "pictureName":  "gigawing2.jpg",
+      "pictureName":  "gigawing2.png",
       "fileName":  "GigaWing2.bin",
       "boardType":  "naomi1",
       "genre": "Shoot 'em Up",
@@ -370,7 +370,7 @@
   },
   {
       "name":  "LupinTheTyping",
-      "pictureName":  "lupboardType.png",
+      "pictureName":  "lupinthetyping.png",
       "fileName":  "Lupin-TheTyping.bin",
       "boardType":  "naomi1",
       "genre": "Typing / Educational",

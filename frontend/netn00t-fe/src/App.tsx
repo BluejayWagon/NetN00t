@@ -416,7 +416,7 @@ function UploadRom() {
                   variant="h1"
                   sx={{ fontSize: "1.5rem", flexGrow: 1, color: "white" }}
                 >
-                  🎮 Netboot Portal
+                  🎮 NetN00t Portal
                 </Typography>
                 <IconButton
                   color="inherit"
