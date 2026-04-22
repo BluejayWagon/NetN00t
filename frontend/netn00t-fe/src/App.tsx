@@ -427,7 +427,7 @@ function UploadRom() {
                       letterSpacing: "0.05em",
                     }}
                   >
-                    NetN00t
+                    NetN00t Portal
                   </Typography>
                 </Box>
                 <IconButton
