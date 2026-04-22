@@ -411,13 +411,25 @@ function UploadRom() {
           {/* Sticky header: AppBar + desktop profile panel */}
           <Box sx={{ position: "sticky", top: 0, zIndex: 1100 }}>
             <AppBar position="static">
-              <Toolbar>
-                <Typography
-                  variant="h1"
-                  sx={{ fontSize: "1.5rem", flexGrow: 1, color: "white" }}
-                >
-                  🎮 NetN00t Portal
-                </Typography>
+              <Toolbar sx={{ minHeight: 72 }}>
+                <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center", gap: 1.5 }}>
+                  <img
+                    src="/netn00t.png"
+                    alt="NetN00t"
+                    style={{ height: "56px", objectFit: "contain" }}
+                  />
+                  <Typography
+                    variant="h1"
+                    sx={{
+                      fontSize: "1.5rem",
+                      fontWeight: 700,
+                      fontFamily: '"Roboto Mono", "Courier New", monospace',
+                      letterSpacing: "0.05em",
+                    }}
+                  >
+                    NetN00t
+                  </Typography>
+                </Box>
                 <IconButton
                   color="inherit"
                   onClick={() => setShowSettingsDialog(true)}

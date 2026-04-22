@@ -1,5 +1,9 @@
 # NetN00t
 
+<p align="center">
+  <img src="frontend/netn00t-fe/public/netn00t.png" alt="NetN00t logo" width="400" />
+</p>
+
 A self-contained web application for netbooting Sega arcade hardware. Point it at a directory of ROM files, create a board profile, and boot games from your browser.
 
 **Supported hardware:** Naomi 1, Naomi 2, Triforce, Chihiro
