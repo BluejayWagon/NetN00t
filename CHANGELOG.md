@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/BluejayWagon/NetN00t/compare/v0.3.2...v0.4.0) (2026-04-23)
+
+
+### Features
+
+* add rpi support ([#22](https://github.com/BluejayWagon/NetN00t/issues/22)) ([9d7046b](https://github.com/BluejayWagon/NetN00t/commit/9d7046b5118bc61bb4e98c90e4c296511661ff92))
+
 ## [0.3.2](https://github.com/BluejayWagon/NetN00t/compare/v0.3.1...v0.3.2) (2026-03-14)
 
 
