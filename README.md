@@ -20,9 +20,14 @@ A self-contained web application for netbooting Sega arcade hardware. Point it a
 
 ## Installation
 
-Pre-built packages for Linux (x86_64) are available on the [Releases](https://github.com/BluejayWagon/NetN00t/releases) page.
+Pre-built packages for Linux (x86_64, arm64, and arm) are available on the [Releases](https://github.com/BluejayWagon/NetN00t/releases) page.
 
-### Debian / Ubuntu
+| Package suffix | Raspberry Pi models |
+|----------------|---------------------|
+| `linux_arm64` | Pi 3, 4, 5 — running a 64-bit OS |
+| `linux_armv7` | Pi 2, 3, 4 — running a 32-bit OS |
+
+### Debian / Ubuntu (including Raspberry Pi OS 64-bit)
 
 ```bash
 sudo dpkg -i netn00t_*.deb
@@ -102,7 +107,7 @@ This means you never have to manually hunt for compatible games — just pick yo
 
 ## Running manually
 
-If you prefer not to use the package, download the binary from the [Releases](https://github.com/BluejayWagon/NetN00t/releases) page and run it directly:
+If you prefer not to use the package, download the binary for your platform from the [Releases](https://github.com/BluejayWagon/NetN00t/releases) page and run it directly.
 
 ```bash
 ./netn00t --data ./config
