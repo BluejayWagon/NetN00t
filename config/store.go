@@ -33,7 +33,7 @@ type profilesFile struct {
 	Profiles []Profile `json:"profiles"`
 }
 
-type MonitorfOrientation struct {
+type MonitorOrientation struct {
 	Name        string `json:"name"`
 	Description string `json:"description"`
 }
@@ -41,17 +41,17 @@ type MonitorfOrientation struct {
 type BoardConfig struct {
 	BoardTypes          []string               `json:"boardTypes"`
 	BoardInfo           map[string]interface{} `json:"boardInfo,omitempty"`
-	MonitorOrientations []MonitorfOrientation  `json:"monitorOrientations"`
+	MonitorOrientations []MonitorOrientation   `json:"monitorOrientations"`
 	DefaultPictures     map[string]string      `json:"defaultPictures,omitempty"`
 }
 
 type Store struct {
-	mu           sync.RWMutex
-	dir          string
-	profiles     profilesFile
-	boardConfig  BoardConfig
-	appConfig    AppConfig
-	profilesPath string
+	mu            sync.RWMutex
+	dir           string
+	profiles      profilesFile
+	boardConfig   BoardConfig
+	appConfig     AppConfig
+	profilesPath  string
 	appConfigPath string
 }
 
@@ -91,7 +91,6 @@ func (s *Store) loadBoardConfig() error {
 	s.boardConfig = cfg
 	return nil
 }
-
 
 func (s *Store) loadProfiles() error {
 	s.mu.Lock()

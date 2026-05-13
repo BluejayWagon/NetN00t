@@ -70,7 +70,7 @@ func boardCompatible(profileBoard, romBoard string) bool {
 	}
 	// Naomi 1 and Naomi 2 can play Atomiswave games (via software emulation)
 	if (strings.Contains(profileNorm, "naomi1") || strings.Contains(profileNorm, "naomi2")) &&
-		strings.Contains(romNorm, "atomswave") {
+		strings.Contains(romNorm, "atomiswave") {
 		return true
 	}
 	return false

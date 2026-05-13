@@ -14,13 +14,19 @@ func AppConfigHandler() http.HandlerFunc {
 		switch r.Method {
 		case http.MethodGet:
 			w.Header().Set("Content-Type", "application/json")
-			json.NewEncoder(w).Encode(appConfigRequest{
-				RomDirectory: profilesStore.GetRomDirectory(),
-			})
+			if nil != profilesStore {
+				json.NewEncoder(w).Encode(appConfigRequest{
+					RomDirectory: profilesStore.GetRomDirectory(),
+				})
+			}
 		case http.MethodPut:
 			var req appConfigRequest
 			if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
 				http.Error(w, "invalid body", http.StatusBadRequest)
+				return
+			}
+			if nil == profilesStore {
+				http.Error(w, "Profile store is not initialized", http.StatusInternalServerError)
 				return
 			}
 			if err := profilesStore.SetRomDirectory(req.RomDirectory); err != nil {
