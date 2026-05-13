@@ -183,4 +183,4 @@ MIT — see [LICENSE](LICENSE)
 
 ## Disclaimer
 
-The game title images bundled with this project are the property of their respective copyright holders (Sega, Sammy, and others). They are included solely for identification purposes and are not covered by the MIT license. This project has no affiliation with or endorsement from Sega or any other rights holder. If you are a rights holder and have concerns, please open an issue.
+The game title images bundled with this project are the property of their respective copyright holders (Sega, etc.). They are included solely for identification purposes and are not covered by the MIT license. This project has no affiliation with or endorsement from Sega or any other rights holder. If you are a rights holder and have concerns, please open an issue.
