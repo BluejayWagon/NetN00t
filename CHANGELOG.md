@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/BluejayWagon/NetN00t/compare/v0.4.0...v0.4.1) (2026-05-13)
+
+
+### Bug Fixes
+
+* house cleaning ([ba4896a](https://github.com/BluejayWagon/NetN00t/commit/ba4896a1cd18b18793ad30b883aadd40ba920d22))
+
 ## [0.4.0](https://github.com/BluejayWagon/NetN00t/compare/v0.3.2...v0.4.0) (2026-04-23)
 
 
