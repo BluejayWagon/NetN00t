@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"io/fs"
+	"log"
 	"net/http"
 	"netn00t/web"
 )
@@ -80,5 +81,5 @@ func main() {
 
 	addr := ":" + *port
 	fmt.Println("Server listening on", addr)
-	http.ListenAndServe(addr, nil)
+	log.Fatal(http.ListenAndServe(addr, nil))
 }

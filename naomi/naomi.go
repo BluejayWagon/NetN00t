@@ -3,8 +3,10 @@ package naomi
 import (
 	"bufio"
 	"encoding/binary"
+	"errors"
 	"fmt"
 	"hash/crc32"
+	"io"
 	"net"
 	"os"
 	"time"
@@ -15,6 +17,7 @@ func ConnectAndUploadRomToNaomi(ip string, filepath string) error {
 	if err != nil {
 		return err
 	}
+	defer Connection.Close()
 	fmt.Println("Connected to Naomi")
 	err = SetHostMode(readWriter, 0, 1)
 	if err != nil {
@@ -39,14 +42,13 @@ func ConnectAndUploadRomToNaomi(ip string, filepath string) error {
 	fmt.Println("Time limit set successfully")
 	// Close the connection
 	fmt.Printf("File %s uploaded successfully, closing connection", filepath)
-	defer Connection.Close()
 	return nil
 }
 
 func Connect(ip string) (*bufio.ReadWriter, net.Conn, error) {
 	conn, err := net.Dial("tcp", ip+":10703")
 	if err != nil {
-		return nil, nil, fmt.Errorf("Failure occured in attempting to connecto to naomi at %w: "+err.Error(), ip)
+		return nil, nil, fmt.Errorf("Failure occured in attempting to connect to naomi at %s: %w ", ip, err)
 	}
 	reader := bufio.NewReader(conn)
 	writer := bufio.NewWriter(conn)
@@ -93,7 +95,7 @@ func WriteData(rw *bufio.ReadWriter, dataToSend any) error {
 	}
 	err := rw.Flush()
 	if err != nil {
-		err = fmt.Errorf("failed to flush")
+		err = fmt.Errorf("failed to flush read/write buffer: %w", err)
 	}
 	return err
 }
@@ -172,11 +174,16 @@ func UploadDimmData(rw *bufio.ReadWriter, address uint32, data []byte, markEnd b
 }
 
 func UploadDimmFileZeroKey(rw *bufio.ReadWriter, filepath string) error {
-	SetSecurityKey(rw, 0)
+	err := SetSecurityKey(rw, 0)
+	if err != nil {
+		return fmt.Errorf("Failed to set security key: %w", err)
+	}
+
 	file, err := os.Open(filepath)
 	if err != nil {
 		return fmt.Errorf("failed to open file: %w", err)
 	}
+	defer file.Close()
 	address := 0
 	crc := uint32(0)
 
@@ -186,7 +193,7 @@ func UploadDimmFileZeroKey(rw *bufio.ReadWriter, filepath string) error {
 		data := make([]byte, 0x8000)
 		n, err := file.ReadAt(data, int64(address))
 		if err != nil {
-			if err.Error() == "EOF" {
+			if errors.Is(err, io.EOF) {
 				break
 			}
 			return fmt.Errorf("failed to read file: %w", err)
