@@ -6,6 +6,8 @@
 
 A self-contained web application for netbooting Sega arcade hardware. Point it at a directory of ROM files, create a board profile, and boot games from your browser.
 
+The UI is fully mobile-friendly and ships as a PWA — on Android or iOS, use "Add to Home Screen" from your browser and it will behave like a native app.
+
 **Supported hardware:** Naomi 1, Naomi 2, Triforce, Chihiro
 
 ---
@@ -55,18 +57,36 @@ Logs are available via:
 journalctl -u netn00t
 ```
 
+To change the port, edit the `ExecStart` line in `/lib/systemd/system/netn00t.service` and add the `--port` flag:
+
+```
+ExecStart=/usr/bin/netn00t --data /var/lib/netn00t --port 9090
+```
+
+Then reload and restart:
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart netn00t
+```
+
 ---
 
-## Configuration
+## Usage
 
-Once running, open your browser to `http://localhost:8080`.
+NetN00t runs on port `8080` by default. Open a browser to `http://<host-ip>:8080` — use `localhost` if you're on the same machine, or the host's IP address from another device on your network.
 
-On first launch, use the settings page to configure:
+To use a different port, pass `--port <PORT>` when running the binary (see [Running manually](#running-manually)), or edit the systemd service file for package installs (see [Managing the service](#managing-the-service)).
 
-- **ROM directory** — the path to your folder of `.bin` ROM files
-- **Arcade board profiles** — one or more profiles, each with a name, board type, IP address, and monitor orientation
+**First launch:** the settings dialog opens automatically — set your ROM directory and create at least one [arcade board profile](#profiles) to get started. You can return to settings at any time via the **Settings** button. Configuration and profiles are stored in `/var/lib/netn00t/` (package installs) or the directory specified by `--data` (manual installs).
 
-Configuration and profiles are stored in `/var/lib/netn00t/` (package installs) or the directory specified by `--data` (manual installs).
+Once set up:
+
+1. Select an arcade board profile from the profile selector
+2. Browse the ROM list — it automatically filters to games compatible with your selected board and monitor orientation
+3. Click a ROM to view details, then click **Upload** to netboot it to the arcade board
+
+![Selecting a ROM and viewing details](docs/rom-select-demo.gif)
 
 ---
 
@@ -91,17 +111,6 @@ When a profile is selected, the ROM list is automatically filtered to show only 
 - A profile set to **vertical** orientation will only show tate (vertical) games
 
 This means you never have to manually hunt for compatible games — just pick your cabinet and browse.
-
----
-
-## Usage
-
-1. Open `http://<host-ip>:8080` in a browser
-2. Select an arcade board profile from the profile selector
-3. Browse the ROM list — it automatically filters to games compatible with your selected board
-4. Click a ROM to view details, then click **Upload** to netboot it to the arcade board
-
-![Selecting a ROM and viewing details](docs/rom-select-demo.gif)
 
 ---
 
@@ -172,6 +181,14 @@ go build -o netn00t .
 ```
 
 **Adding ROM metadata:** Edit [file/romConfig.json](file/romConfig.json) — each entry needs `name`, `fileName`, `pictureName`, `boardType`, `genre`, `tate` (bool), and `description`. ROM artwork goes in [file/images/](file/images/).
+
+---
+
+## Acknowledgements
+
+The netboot protocol implementation in this project is a Go rewrite of the work done by debugmode, whose [triforcetools.py](https://web.archive.org/web/20090824052208/http://debugmo.de/wp-content/uploads/2009/04/triforcetools.py) was the original documentation of how netdimm connections actually work. Without that script, none of this would have been possible.
+
+Thanks also to [piforcetools](https://github.com/travistyoj/piforcetools) for demonstrating how that work could be put into practice.
 
 ---
 
